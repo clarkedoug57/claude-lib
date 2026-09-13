@@ -1,0 +1,11 @@
+{
+  "name": "@claude-lib/statement-core",
+  "version": "0.1.0",
+  "description": "The period reconciliation gate: opening balance plus signed items must equal the closing balance; per-position quantities likewise. Pure. Knows no app vocabulary.",
+  "type": "module",
+  "exports": "./src/index.js",
+  "claudeLib": {
+    "class": "utility"
+  },
+  "dependencies": {}
+}

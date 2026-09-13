@@ -1,0 +1,153 @@
+{
+  "formatVersion": 1,
+  "kind": "statement",
+  "id": "td/line-of-credit-transaction-list",
+  "statement": {
+    "issuer": "TD",
+    "documentType": "Line of credit transaction list",
+    "currency": "CAD",
+    "period": {
+      "start": "2026-08-27",
+      "end": "2026-09-13"
+    },
+    "sections": [
+      {
+        "identity": {
+          "accountNumber": "····6278",
+          "holders": [],
+          "label": "LINE OF CREDIT UNSECURED"
+        },
+        "period": {
+          "start": "2026-08-27",
+          "end": "2026-09-13"
+        },
+        "opening": {
+          "balance": 12880.23,
+          "printed": false
+        },
+        "closing": {
+          "balance": -3045.89,
+          "printed": true
+        },
+        "items": [
+          {
+            "date": "2026-09-01",
+            "effectiveDate": null,
+            "description": "INTEREST",
+            "amount": 95.57,
+            "runningBalance": -3045.89,
+            "page": 1,
+            "sequence": 0,
+            "category": "Debit"
+          },
+          {
+            "date": "2026-08-31",
+            "effectiveDate": null,
+            "description": "SEND E-TFR ***E3k",
+            "amount": 10000,
+            "runningBalance": -3141.46,
+            "page": 1,
+            "sequence": 1,
+            "category": "Debit"
+          },
+          {
+            "date": "2026-08-31",
+            "effectiveDate": null,
+            "description": "RQ551 TFR-FR ····TED",
+            "amount": -13075.53,
+            "runningBalance": -13141.46,
+            "page": 1,
+            "sequence": 2,
+            "category": "Credit"
+          },
+          {
+            "date": "2026-08-31",
+            "effectiveDate": null,
+            "description": "TD ATM W/D ····5216",
+            "amount": 20,
+            "runningBalance": -65.93,
+            "page": 1,
+            "sequence": 3,
+            "category": "Debit"
+          },
+          {
+            "date": "2026-08-27",
+            "effectiveDate": null,
+            "description": "SEND E-TFR ***J5b",
+            "amount": 4000,
+            "runningBalance": -85.93,
+            "page": 1,
+            "sequence": 4,
+            "category": "Debit"
+          },
+          {
+            "date": "2026-08-27",
+            "effectiveDate": null,
+            "description": "HP355 TFR-FR ····TED",
+            "amount": -16966.16,
+            "runningBalance": -4085.93,
+            "page": 1,
+            "sequence": 5,
+            "category": "Credit"
+          }
+        ],
+        "positions": null
+      }
+    ],
+    "ignored": [
+      {
+        "page": 1,
+        "text": "Account balance −$3,045.89 As of Sep 13, 2026",
+        "reason": "Summary block showing the closing balance, not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Available credit $33,045.89 / Minimum payment due $0.00 / Interest rate 10.44% TD Prime Rate + 5.99%",
+        "reason": "Summary and rate information, not transactions"
+      },
+      {
+        "page": 2,
+        "text": "Total  $14,115.57  $30,041.69",
+        "reason": "Column totals row, not a transaction"
+      }
+    ]
+  },
+  "raw": {
+    "pages": [
+      [
+        "TD",
+        "LINE OF CREDIT UNSECURED  ····6278",
+        "Account balance  Available credit  Minimum payment due",
+        "−$3,045.89  $33,045.89  $0.00",
+        "As of Sep 13, 2026",
+        "Interest rate",
+        "10.44%",
+        "TD Prime Rate + 5.99%¹",
+        "Your transactions",
+        "Last 30 days",
+        "Date  Description  Debits  Credits  Balance",
+        "Sep 1, 2026  INTEREST  $95.57    −$3,045.89",
+        "Aug 31, 2026  SEND E-TFR ***E3k  $10,000.00    −$3,141.46",
+        "Aug 31, 2026  RQ551 TFR-FR ····TED    $13,075.53  −$13,141.46",
+        "Aug 31, 2026  TD ATM W/D ····5216  $20.00    −$65.93",
+        "Aug 27, 2026  SEND E-TFR ***J5b  $4,000.00    −$85.93",
+        "Aug 27, 2026  HP355 TFR-FR ····TED    $16,966.16  −$4,085.93"
+      ],
+      [
+        "Date  Description  Debits  Credits  Balance",
+        "Total  $14,115.57  $30,041.69",
+        "End of list. Change filters"
+      ]
+    ]
+  },
+  "notes": "Staged by the R-591 corpus proof (S250). Image-only document; raw rows are the model transcription, proven by the arithmetic.",
+  "provenance": {
+    "stagedAt": "2026-09-13T23:31:04.098Z",
+    "sourceHash": "9e53cef9985af897",
+    "pageCount": 2,
+    "hasTextLayer": false,
+    "model": "claude-opus-5",
+    "calls": 1,
+    "costUsd": 0.0959
+  }
+}

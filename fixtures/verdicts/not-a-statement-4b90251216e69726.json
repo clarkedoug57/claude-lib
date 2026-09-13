@@ -1,0 +1,51 @@
+{
+  "formatVersion": 1,
+  "kind": "verdict",
+  "id": "verdicts/not-a-statement-4b90251216e69726",
+  "verdict": {
+    "kind": "not-a-statement",
+    "reason": "This is a screen capture of TD's online banking \"View Transactions\" page for the TD Cash Back Visa card, not an issued statement. Page 1 is the account dashboard (buttons \"Pay\", \"Pay Off Purchases\", \"Pay Down Balance\", \"My TD Rewards\", tabs \"Activity / Manage\", and a marketing panel \"Large purchases shouldn't leave you stressed ... Set up a TD Payment Plan\"), and the selected statement period reports nothing: page 1 shows \"Last Statement Balance Aug 11, 2026 – Sep 09, 2026 / Not applicable\", and page 2 says \"No Transactions — You have no transactions in the selected statement period.\" There are no dated transaction rows and no printed opening balance, so no AccountSection can be formed."
+  },
+  "raw": {
+    "pages": [
+      [
+        "TD CASH BACK VISA* CARD  ····2034******9734",
+        "Current Balance  Pending Transactions  Last Statement Balance",
+        "$0.00  $0.00  Aug 11, 2026 – Sep 09, 2026",
+        "Not applicable",
+        "Available Credit  Cash Back Dollars  Payment Due",
+        "$13,000.00  $70.46  Oct 01, 2026",
+        "Last Payment  Minimum Payment",
+        "Jan 06, 2026  $0.00",
+        "$5.48",
+        "Pay  Pay Off Purchases  Pay Down Balance  My TD Rewards",
+        "Activity  Manage",
+        "View Transactions",
+        "Aug 11, 2026 - Sep 09, 2026 (Last statement)",
+        "Set up a TD Payment Plan >",
+        "Large purchases shouldn't leave you stressed",
+        "Introducing TD Payment Plans, a convenient feature that allows you to pay off an eligible purchase in a timeframe",
+        "that works for you and your budget. Get more flexibility and peace of mind knowing exactly when large purchases",
+        "are paid off in full. Conditions apply.",
+        "Set up a TD Payment Plan >"
+      ],
+      [
+        "Aug 11, 2026 - Sep 09, 2026 (Last statement)",
+        "Statement balance for the selected period: $0.00",
+        "Minimum payment and due date: $0.00 by Oct 01, 2026",
+        "No Transactions",
+        "You have no transactions in the selected statement period.  View all your transactions",
+        "Legal Notes"
+      ]
+    ]
+  },
+  "notes": "Negative fixture staged by the R-591 corpus proof (S250): the agent must keep refusing this document.",
+  "provenance": {
+    "stagedAt": "2026-09-13T23:30:29.858Z",
+    "sourceHash": "4b90251216e69726",
+    "pageCount": 2,
+    "hasTextLayer": false,
+    "calls": 2,
+    "costUsd": 0.0671
+  }
+}

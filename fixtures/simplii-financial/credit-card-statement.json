@@ -1,0 +1,226 @@
+{
+  "formatVersion": 1,
+  "kind": "statement",
+  "id": "simplii-financial/credit-card-statement",
+  "statement": {
+    "issuer": "Simplii Financial",
+    "documentType": "Credit card statement",
+    "currency": "CAD",
+    "period": {
+      "start": "2026-07-23",
+      "end": "2026-08-22"
+    },
+    "sections": [
+      {
+        "identity": {
+          "accountNumber": "4525 XXXX XXXX 0916",
+          "holders": [
+            "HOLDER-1"
+          ],
+          "label": "Cash Back Visa Card"
+        },
+        "period": {
+          "start": "2026-07-23",
+          "end": "2026-08-22"
+        },
+        "opening": {
+          "balance": -1.49,
+          "printed": true
+        },
+        "closing": {
+          "balance": 1.3,
+          "printed": true
+        },
+        "items": [
+          {
+            "date": "2026-08-14",
+            "effectiveDate": "2026-08-17",
+            "description": "ELORA HOME HARDWARE  ELORA  ON",
+            "amount": 2.79,
+            "runningBalance": null,
+            "page": 2,
+            "sequence": 0,
+            "category": "Home and Office Improvement"
+          }
+        ],
+        "positions": null
+      }
+    ],
+    "ignored": [
+      {
+        "page": 1,
+        "text": "Previous balance  $1.49 CR",
+        "reason": "Summary block: opening balance, not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Payments  $0.00 / Other credits  0.00 / Total credits  -  $0.00",
+        "reason": "Summary totals"
+      },
+      {
+        "page": 1,
+        "text": "Purchases  2.79 / Cash advances 0.00 / Interest 0.00 / Fees 0.00 / Total charges  +  $2.79",
+        "reason": "Summary totals"
+      },
+      {
+        "page": 1,
+        "text": "New balance  =  $1.30",
+        "reason": "Summary block: closing balance"
+      },
+      {
+        "page": 1,
+        "text": "Current month’s minimum payment  $1.30 / Please pay this amount by  Sep 14, 2026",
+        "reason": "Minimum payment due notice, not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Your Cash Back: As at last statement + 0.00; 0.5% Cash Back + 0.01; Total Cash Back = 0.01",
+        "reason": "Cash back rewards summary, not an account transaction"
+      },
+      {
+        "page": 1,
+        "text": "Summary Credit Limit $4,000.00 / Available $3,998.70",
+        "reason": "Credit limit summary"
+      },
+      {
+        "page": 1,
+        "text": "Payment slip: New balance $1.30 / Sep 14, 2026  $1.30 / Total payment enclosed",
+        "reason": "Tear-off payment slip"
+      },
+      {
+        "page": 2,
+        "text": "Total for  4525 XXXX XXXX 0916  $2.79",
+        "reason": "Section total"
+      },
+      {
+        "page": 3,
+        "text": "Spend Report: Home and Office Improvement 1 2.79 ... ; Other Transactions 0 0.00 ... 1 -1.50; Total 1 2.79 2 $1.29; Total Monthly Budget 2.79",
+        "reason": "Spend report / budget summary for period July 23 to August 22, 2026, not transactions"
+      }
+    ]
+  },
+  "raw": {
+    "pages": [
+      [
+        "TM  HOLDER-1",
+        "Simplii Financial",
+        "Account number",
+        "*",
+        "4525 XXXX XXXX 0916",
+        "Cash Back Visa  Card",
+        "August statement period",
+        "July 23 to August 22, 2026",
+        "Your account at a glance  Contact us",
+        "Customer Service  1 888 ····8881",
+        "Previous balance  $1.49 CR",
+        "Lost/Stolen  1 888 ····8881",
+        "Payments  $0.00  TTY  1 888 ····9022",
+        "Online  simplii.com",
+        "Other credits  0.00",
+        "Total credits  -  $0.00  Summary  Credit",
+        "Purchases  2.79  Limit  $4,000.00",
+        "Cash advances  0.00  Available  $3,998.70",
+        "Interest  0.00",
+        "Interest rates  Annual",
+        "Fees  0.00",
+        "Regular purchases  21.99%",
+        "Total charges  +  $2.79  Cash advances  22.99%",
+        "*····0000*",
+        "New balance  =  $1.30",
+        "Your minimum payment due  Your Cash Back",
+        "As at last statement  +  0.00",
+        "Current month’s minimum payment  $1.30  This statement",
+        "Please pay this amount by  Sep 14, 2026",
+        "0.5% Cash Back  +  0.01",
+        "Total Cash Back  =  0.01",
+        "*····0000*",
+        "Tear Off here  Please turn over - Transactions begin on page 2  Page  1  of 3",
+        "Simplii Financial  Payment options  Account number  4525 XXXX XXXX 0916",
+        "•  Online Banking: simplii.com",
+        "Cash Back Visa Card  •  Telephone Banking: 1 888 ····8881  New balance  $1.30",
+        "•  Mail: Return completed slip with your cheque",
+        "or money order payable to Simplii Financial.  Current month's minimum",
+        "For general inquiries call  payment due by",
+        "1 888 ····8881",
+        "Sep 14, 2026  $1.30",
+        "Do not staple or attach correspondence.",
+        "Total payment enclosed  $_____________",
+        "····1174",
+        "HOLDER-1",
+        "REDACTED",
+        "ELORA  ON  REDACTED  SIMPLII  FINANCIAL",
+        "PO  BOX  4595  STN  A",
+        "TORONTO  ON  M5W  4X9",
+        "····1174",
+        "····1308"
+      ],
+      [
+        "Transactions  from July 23 to August 22, 2026",
+        "Your new charges and credits",
+        "Trans  Post",
+        "date  date  Description  Spend Categories  Amount($)",
+        "Card number 4525 XXXX XXXX 0916",
+        "Aug 14  Aug 17  ELORA HOME HARDWARE  ELORA  ON  Home and Office Improvement  2.79",
+        "Total for  4525 XXXX XXXX 0916  $2.79",
+        "Page  2  of 3",
+        "Information about your Simplii Financial Cash Back Visa Card account",
+        "If you find an error or irregularity (including possible unauthorized or  considered received by us on the payment due date if made by 11:59pm",
+        "fraudulent Transactions) in this statement you must tell us within 30  EST. Payments made by mail or through another financial institution",
+        "days of this statement date. If you do not, we may regard this statement  can take several days to be received by us. Please make your payments",
+        "as final (except for credits posted in error).  accordingly. Check online banking for the status of your payments and",
+        "How we charge interest:  .  If interest is charged on a Purchase, it  your most up to date balance.",
+        "is charged retroactively from the Transaction date. You have a minimum",
+        "21 day interest-free grace period for new Purchases. You can avoid  **Foreign currency Transactions, except Convenience Cheques, are",
+        "interest on those new Purchases by paying your new balance in full by  converted to Canadian dollars on or after the Transaction date and no",
+        "the payment due date.  later than the Transaction posting date. At the time of currency",
+        "Interest is charged on Cash Advances from the date they are taken.  conversion, you are charged the same conversion rate we must pay, plus",
+        "Interest is charged on Convenience Cheques and Balance Transfers from  a fee of 2.5% of the converted amount, on both debits and credits. We",
+        "the date they are posted to your account.  convert a foreign currency Convenience Cheque or payment at our",
+        "We stop charging interest on the day we receive a payment which covers  branch selling rate for Canadian dollars in effect at the time we process",
+        "the amount of the Purchase, Cash Advance, Balance Transfer or  it.",
+        "Convenience Cheque, as the case may be, as described in the",
+        "Application of Payments section of your Simplii Financial Credit Card  For more information, please refer to your Simplii Financial Credit Card",
+        "Agreement.  Agreement. Simplii Financial products and services are provided by",
+        "Payment period extensions:  .  If you didn’t pay the full Balance on  CIBC.",
+        "your last monthly statement, we have extended your payment due date",
+        "this month to give you extra time to make your payment. Interest will  “SIMPLII FINANCIAL” and the SIMPLII FINANCIAL DESIGNS are trademarks of",
+        "continue to accrue for the extended period. When we receive your full  CIBC. “Simplii Financial” is a division of CIBC. Banking services are not available in",
+        "Quebec.",
+        "Balance, your payment due date will change back to your regular  *",
+        "payment due date, which is at least 21 days after the statement date.  Trademark of Visa International Service Association and used under license",
+        "If you made a payment within a few days of the statement date, it may",
+        "appear on your next monthly statement. The payment due date is",
+        "determined under Eastern Standard Time (EST) meaning payments are"
+      ],
+      [
+        "Prepared for: HOLDER-1 July 23 to August 22, 2026 Account number: 4525 XXXX XXXX 0916",
+        "Spend Report",
+        "This month  Year-to-date",
+        "Spend Categories  Transactions  Amount($)  Budget ($)  Difference ($)  Transactions  Amount ($)",
+        "Home and Office Improvement  1  2.79  -  -  1  2.79",
+        "Other Transactions  0  0.00  -  -  1  -1.50",
+        "Total  1  2.79  2  $1.29",
+        "Transactions are assigned a spend category based on where the goods or services are purchased, not on what was purchased. For example,",
+        "items purchased at a convenience store in a gas station will appear under Transportation, not Retail and Grocery.",
+        "A negative difference (–) means you spent more than you budgeted.",
+        "Amount($)  Budget ($)  Difference ($)",
+        "Total Monthly Budget  2.79  -  -",
+        "*····0000*",
+        "*····0000*",
+        "-  ····1174",
+        "Page  3  of 3"
+      ],
+      []
+    ]
+  },
+  "notes": "Staged by the R-591 corpus proof (S250). Text-layer document; raw rows are the extractor output.",
+  "provenance": {
+    "stagedAt": "2026-09-13T23:38:37.034Z",
+    "sourceHash": "09759f07af0f7b5b",
+    "pageCount": 4,
+    "hasTextLayer": true,
+    "model": "claude-opus-5",
+    "calls": 1,
+    "costUsd": 0.045
+  }
+}

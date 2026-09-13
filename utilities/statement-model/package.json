@@ -1,0 +1,11 @@
+{
+  "name": "@claude-lib/statement-model",
+  "version": "0.2.0",
+  "description": "The canonical Statement / AccountSection / LineItem model as a JSON Schema, a validator over it, and the strict-tool schema generated from it. Pure. Knows no issuer and no app.",
+  "type": "module",
+  "exports": "./src/index.js",
+  "claudeLib": {
+    "class": "utility"
+  },
+  "dependencies": {}
+}

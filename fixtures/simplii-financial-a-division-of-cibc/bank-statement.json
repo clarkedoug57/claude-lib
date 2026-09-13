@@ -1,0 +1,729 @@
+{
+  "formatVersion": 1,
+  "kind": "statement",
+  "id": "simplii-financial-a-division-of-cibc/bank-statement",
+  "statement": {
+    "issuer": "Simplii Financial (a division of CIBC)",
+    "documentType": "bank statement",
+    "currency": "CAD",
+    "period": {
+      "start": "2026-07-30",
+      "end": "2026-08-30"
+    },
+    "sections": [
+      {
+        "identity": {
+          "accountNumber": "····1459",
+          "holders": [
+            "HOLDER-1",
+            "HOLDER-2"
+          ],
+          "label": "your no fee chequing account"
+        },
+        "period": {
+          "start": "2026-07-30",
+          "end": "2026-08-30"
+        },
+        "opening": {
+          "balance": 1965.84,
+          "printed": true
+        },
+        "closing": {
+          "balance": 1558.48,
+          "printed": true
+        },
+        "items": [
+          {
+            "date": "2026-07-31",
+            "effectiveDate": "2026-07-30",
+            "description": "WIGHTMAN",
+            "amount": -101.58,
+            "runningBalance": 1864.26,
+            "page": 1,
+            "sequence": 0,
+            "category": null
+          },
+          {
+            "date": "2026-07-31",
+            "effectiveDate": "2026-07-31",
+            "description": "LCBO/RAO 0461",
+            "amount": -31.6,
+            "runningBalance": 1832.66,
+            "page": 1,
+            "sequence": 1,
+            "category": null
+          },
+          {
+            "date": "2026-08-03",
+            "effectiveDate": "2026-08-03",
+            "description": "POS PURCHASE NETFLIX.COM",
+            "amount": -21.46,
+            "runningBalance": 1811.2,
+            "page": 1,
+            "sequence": 2,
+            "category": null
+          },
+          {
+            "date": "2026-08-03",
+            "effectiveDate": "2026-08-03",
+            "description": "POS PURCHASE Patreon Membership",
+            "amount": -8.65,
+            "runningBalance": 1802.55,
+            "page": 1,
+            "sequence": 3,
+            "category": null
+          },
+          {
+            "date": "2026-08-03",
+            "effectiveDate": "2026-08-03",
+            "description": "ZEHRS 539 FERG",
+            "amount": -68.32,
+            "runningBalance": 1734.23,
+            "page": 1,
+            "sequence": 4,
+            "category": null
+          },
+          {
+            "date": "2026-08-03",
+            "effectiveDate": "2026-08-03",
+            "description": "INTERAC E-TRANSFER RECEIVE PERSON-2",
+            "amount": 1700,
+            "runningBalance": 3434.23,
+            "page": 1,
+            "sequence": 5,
+            "category": null
+          },
+          {
+            "date": "2026-08-04",
+            "effectiveDate": "2026-08-04",
+            "description": "ELORA HOME HARD",
+            "amount": -76.33,
+            "runningBalance": 3357.9,
+            "page": 1,
+            "sequence": 6,
+            "category": null
+          },
+          {
+            "date": "2026-08-04",
+            "effectiveDate": "2026-08-04",
+            "description": "ZEHRS 539 FERG",
+            "amount": -199.25,
+            "runningBalance": 3158.65,
+            "page": 1,
+            "sequence": 7,
+            "category": null
+          },
+          {
+            "date": "2026-08-05",
+            "effectiveDate": "2026-08-05",
+            "description": "WITH THE GRAIN",
+            "amount": -31.57,
+            "runningBalance": 3127.08,
+            "page": 1,
+            "sequence": 8,
+            "category": null
+          },
+          {
+            "date": "2026-08-05",
+            "effectiveDate": "2026-08-05",
+            "description": "GERRIES FARM MA",
+            "amount": -19.5,
+            "runningBalance": 3107.58,
+            "page": 1,
+            "sequence": 9,
+            "category": null
+          },
+          {
+            "date": "2026-08-06",
+            "effectiveDate": "2026-08-06",
+            "description": "SOLAR SWIM",
+            "amount": -118.88,
+            "runningBalance": 2988.7,
+            "page": 2,
+            "sequence": 10,
+            "category": null
+          },
+          {
+            "date": "2026-08-07",
+            "effectiveDate": "2026-08-07",
+            "description": "ZEHRS 539 FERG",
+            "amount": -220.08,
+            "runningBalance": 2768.62,
+            "page": 2,
+            "sequence": 11,
+            "category": null
+          },
+          {
+            "date": "2026-08-07",
+            "effectiveDate": "2026-08-07",
+            "description": "ZEHRS 539 FERG",
+            "amount": -30,
+            "runningBalance": 2738.62,
+            "page": 2,
+            "sequence": 12,
+            "category": null
+          },
+          {
+            "date": "2026-08-07",
+            "effectiveDate": "2026-08-07",
+            "description": "ZEHRS 539 FERG",
+            "amount": -19.98,
+            "runningBalance": 2718.64,
+            "page": 2,
+            "sequence": 13,
+            "category": null
+          },
+          {
+            "date": "2026-08-07",
+            "effectiveDate": "2026-08-07",
+            "description": "LCBO/RAO 0461",
+            "amount": -30.35,
+            "runningBalance": 2688.29,
+            "page": 2,
+            "sequence": 14,
+            "category": null
+          },
+          {
+            "date": "2026-08-10",
+            "effectiveDate": "2026-08-07",
+            "description": "CORP TWSHP OF CTR WELLINGTON",
+            "amount": -683.17,
+            "runningBalance": 2005.12,
+            "page": 2,
+            "sequence": 15,
+            "category": null
+          },
+          {
+            "date": "2026-08-10",
+            "effectiveDate": "2026-08-10",
+            "description": "ELORA HOME HARD",
+            "amount": -35.99,
+            "runningBalance": 1969.13,
+            "page": 2,
+            "sequence": 16,
+            "category": null
+          },
+          {
+            "date": "2026-08-11",
+            "effectiveDate": "2026-08-11",
+            "description": "INTERAC E-TRANSFER SEND PERSON-X",
+            "amount": -152,
+            "runningBalance": 1817.13,
+            "page": 2,
+            "sequence": 17,
+            "category": null
+          },
+          {
+            "date": "2026-08-12",
+            "effectiveDate": "2026-08-12",
+            "description": "ELORA HOME HARD",
+            "amount": -10.08,
+            "runningBalance": 1807.05,
+            "page": 2,
+            "sequence": 18,
+            "category": null
+          },
+          {
+            "date": "2026-08-12",
+            "effectiveDate": "2026-08-12",
+            "description": "ZEHRS 539 FERG",
+            "amount": -60.67,
+            "runningBalance": 1746.38,
+            "page": 2,
+            "sequence": 19,
+            "category": null
+          },
+          {
+            "date": "2026-08-13",
+            "effectiveDate": "2026-08-13",
+            "description": "ELORA HOME HARD",
+            "amount": -59.71,
+            "runningBalance": 1686.67,
+            "page": 2,
+            "sequence": 20,
+            "category": null
+          },
+          {
+            "date": "2026-08-13",
+            "effectiveDate": "2026-08-13",
+            "description": "COBS Bread",
+            "amount": -23.37,
+            "runningBalance": 1663.3,
+            "page": 2,
+            "sequence": 21,
+            "category": null
+          },
+          {
+            "date": "2026-08-13",
+            "effectiveDate": "2026-08-13",
+            "description": "ZEHRS 539 FERG",
+            "amount": -172.04,
+            "runningBalance": 1491.26,
+            "page": 2,
+            "sequence": 22,
+            "category": null
+          },
+          {
+            "date": "2026-08-14",
+            "effectiveDate": "2026-08-14",
+            "description": "GEDDES STREET M",
+            "amount": -53.23,
+            "runningBalance": 1438.03,
+            "page": 2,
+            "sequence": 23,
+            "category": null
+          },
+          {
+            "date": "2026-08-17",
+            "effectiveDate": "2026-08-17",
+            "description": "SQ THE VAULT C",
+            "amount": -48.52,
+            "runningBalance": 1389.51,
+            "page": 3,
+            "sequence": 24,
+            "category": null
+          },
+          {
+            "date": "2026-08-17",
+            "effectiveDate": "2026-08-17",
+            "description": "LOONEY TOONEY",
+            "amount": -8.75,
+            "runningBalance": 1380.76,
+            "page": 3,
+            "sequence": 25,
+            "category": null
+          },
+          {
+            "date": "2026-08-17",
+            "effectiveDate": "2026-08-17",
+            "description": "ZEHRS 539 FERG",
+            "amount": -129.71,
+            "runningBalance": 1251.05,
+            "page": 3,
+            "sequence": 26,
+            "category": null
+          },
+          {
+            "date": "2026-08-17",
+            "effectiveDate": "2026-08-17",
+            "description": "LCBO/RAO 0461",
+            "amount": -32.85,
+            "runningBalance": 1218.2,
+            "page": 3,
+            "sequence": 27,
+            "category": null
+          },
+          {
+            "date": "2026-08-18",
+            "effectiveDate": "2026-08-17",
+            "description": "TRILLIUM MUTUAL INSURANCE CO",
+            "amount": -291.65,
+            "runningBalance": 926.55,
+            "page": 3,
+            "sequence": 28,
+            "category": null
+          },
+          {
+            "date": "2026-08-18",
+            "effectiveDate": "2026-08-17",
+            "description": "CWHydro",
+            "amount": -342,
+            "runningBalance": 584.55,
+            "page": 3,
+            "sequence": 29,
+            "category": null
+          },
+          {
+            "date": "2026-08-18",
+            "effectiveDate": "2026-08-18",
+            "description": "TRANSFER IN",
+            "amount": 950,
+            "runningBalance": 1534.55,
+            "page": 3,
+            "sequence": 30,
+            "category": null
+          },
+          {
+            "date": "2026-08-18",
+            "effectiveDate": "2026-08-18",
+            "description": "TRANSFER OUT",
+            "amount": -250,
+            "runningBalance": 1284.55,
+            "page": 3,
+            "sequence": 31,
+            "category": null
+          },
+          {
+            "date": "2026-08-18",
+            "effectiveDate": "2026-08-18",
+            "description": "INTERAC E-TRANSFER SEND PERSON-X",
+            "amount": -1243,
+            "runningBalance": 41.55,
+            "page": 3,
+            "sequence": 32,
+            "category": null
+          },
+          {
+            "date": "2026-08-19",
+            "effectiveDate": "2026-08-19",
+            "description": "INTERAC E-TRANSFER REQ MONEY PERSON-X",
+            "amount": 700,
+            "runningBalance": 741.55,
+            "page": 3,
+            "sequence": 33,
+            "category": null
+          },
+          {
+            "date": "2026-08-20",
+            "effectiveDate": "2026-08-20",
+            "description": "MARKET FRESH",
+            "amount": -46.02,
+            "runningBalance": 695.53,
+            "page": 3,
+            "sequence": 34,
+            "category": null
+          },
+          {
+            "date": "2026-08-21",
+            "effectiveDate": "2026-08-20",
+            "description": "ENBRIDGE",
+            "amount": -276.07,
+            "runningBalance": 419.46,
+            "page": 3,
+            "sequence": 35,
+            "category": null
+          },
+          {
+            "date": "2026-08-24",
+            "effectiveDate": "2026-08-24",
+            "description": "SP BRIGHTENUPTO",
+            "amount": -36.08,
+            "runningBalance": 383.38,
+            "page": 3,
+            "sequence": 36,
+            "category": null
+          },
+          {
+            "date": "2026-08-24",
+            "effectiveDate": "2026-08-24",
+            "description": "ZEHRS 539 FERG",
+            "amount": -202.11,
+            "runningBalance": 181.27,
+            "page": 3,
+            "sequence": 37,
+            "category": null
+          },
+          {
+            "date": "2026-08-24",
+            "effectiveDate": "2026-08-24",
+            "description": "THE SCENTED MAR",
+            "amount": -22.59,
+            "runningBalance": 158.68,
+            "page": 4,
+            "sequence": 38,
+            "category": null
+          },
+          {
+            "date": "2026-08-24",
+            "effectiveDate": "2026-08-24",
+            "description": "FRABERTS FRESH",
+            "amount": -12.99,
+            "runningBalance": 145.69,
+            "page": 4,
+            "sequence": 39,
+            "category": null
+          },
+          {
+            "date": "2026-08-24",
+            "effectiveDate": "2026-08-24",
+            "description": "COBS Bread",
+            "amount": -18.85,
+            "runningBalance": 126.84,
+            "page": 4,
+            "sequence": 40,
+            "category": null
+          },
+          {
+            "date": "2026-08-24",
+            "effectiveDate": "2026-08-24",
+            "description": "TRANSFER IN",
+            "amount": 100,
+            "runningBalance": 226.84,
+            "page": 4,
+            "sequence": 41,
+            "category": null
+          },
+          {
+            "date": "2026-08-24",
+            "effectiveDate": "2026-08-24",
+            "description": "INTERAC E-TRANSFER SEND PERSON-X",
+            "amount": -171,
+            "runningBalance": 55.84,
+            "page": 4,
+            "sequence": 42,
+            "category": null
+          },
+          {
+            "date": "2026-08-24",
+            "effectiveDate": "2026-08-24",
+            "description": "INTERAC E-TRANSFER REQ MONEY PERSON-X",
+            "amount": 100,
+            "runningBalance": 155.84,
+            "page": 4,
+            "sequence": 43,
+            "category": null
+          },
+          {
+            "date": "2026-08-26",
+            "effectiveDate": "2026-08-26",
+            "description": "TST-Polestar He",
+            "amount": -46.59,
+            "runningBalance": 109.25,
+            "page": 4,
+            "sequence": 44,
+            "category": null
+          },
+          {
+            "date": "2026-08-27",
+            "effectiveDate": "2026-08-27",
+            "description": "TRANSFER IN",
+            "amount": 1700,
+            "runningBalance": 1809.25,
+            "page": 4,
+            "sequence": 45,
+            "category": null
+          },
+          {
+            "date": "2026-08-27",
+            "effectiveDate": "2026-08-27",
+            "description": "LCBO/RAO 0461",
+            "amount": -60.9,
+            "runningBalance": 1748.35,
+            "page": 4,
+            "sequence": 46,
+            "category": null
+          },
+          {
+            "date": "2026-08-27",
+            "effectiveDate": "2026-08-27",
+            "description": "ZEHRS 539 FERG",
+            "amount": -167.57,
+            "runningBalance": 1580.78,
+            "page": 4,
+            "sequence": 47,
+            "category": null
+          },
+          {
+            "date": "2026-08-28",
+            "effectiveDate": "2026-08-28",
+            "description": "ELORA HOME HARD",
+            "amount": -22.31,
+            "runningBalance": 1558.47,
+            "page": 4,
+            "sequence": 48,
+            "category": null
+          },
+          {
+            "date": "2026-08-30",
+            "effectiveDate": "2026-08-31",
+            "description": "INTEREST",
+            "amount": 0.01,
+            "runningBalance": 1558.48,
+            "page": 4,
+            "sequence": 49,
+            "category": "interest"
+          }
+        ],
+        "positions": null
+      }
+    ],
+    "ignored": [
+      {
+        "page": 1,
+        "text": "Jul 30  Jul 30  BALANCE FORWARD  1,965.84",
+        "reason": "Opening balance row, not a transaction"
+      },
+      {
+        "page": 4,
+        "text": "total funds out  5,657.37",
+        "reason": "Period total, not a transaction"
+      },
+      {
+        "page": 4,
+        "text": "total funds in  5,250.01",
+        "reason": "Period total, not a transaction"
+      },
+      {
+        "page": 4,
+        "text": "closing balance  1,558.48",
+        "reason": "Closing balance summary line, not a transaction"
+      },
+      {
+        "page": 5,
+        "text": "Interest Rate / Monthly Interest Calculation table (6.00% $4.93 ... 13.00% $10.69)",
+        "reason": "Illustrative interest-rate table, not account activity"
+      }
+    ]
+  },
+  "raw": {
+    "pages": [
+      [
+        "your no fee chequing account",
+        "statement period:  July 30, 2026 - August 30, 2026",
+        "statement date:  August 30, 2026",
+        "account number:  ····1459",
+        "HOLDER-1",
+        "OR HOLDER-2",
+        "REDACTED  overdraft limit:  $300.00",
+        "ELORA ON",
+        "overdraft amount due:  $0.00",
+        "REDACTED",
+        "details",
+        "trans.  eff.  transaction  funds out  funds in  balance",
+        "date  date",
+        "Jul 30  Jul 30  BALANCE FORWARD  1,965.84",
+        "Jul 31  Jul 30  WIGHTMAN  101.58  1,864.26",
+        "Jul 31  Jul 31  LCBO/RAO 0461  31.60  1,832.66",
+        "Aug 03  Aug 03  POS PURCHASE NETFLIX.COM  21.46  1,811.20",
+        "Aug 03  Aug 03  POS PURCHASE Patreon Membership  8.65  1,802.55",
+        "Aug 03  Aug 03  ZEHRS 539 FERG  68.32  1,734.23",
+        "Aug 03  Aug 03  INTERAC E-TRANSFER RECEIVE PERSON-2  1,700.00  3,434.23",
+        "Aug 04  Aug 04  ELORA HOME HARD  76.33  3,357.90",
+        "Aug 04  Aug 04  ZEHRS 539 FERG  199.25  3,158.65",
+        "Aug 05  Aug 05  WITH THE GRAIN  31.57  3,127.08",
+        "Aug 05  Aug 05  GERRIES FARM MA  19.50  3,107.58",
+        "transactions continue in the next page",
+        "page  1  of  5  7010CA-2024/09-INT",
+        "“SIMPLII FINANCIAL” and the SIMPLII FINANCIAL DESIGNS are trademarks of CIBC.  PO Box 603, STN Agincourt, Scarborough ON M1S 5K9",
+        "····8881 simplii.com",
+        "“Simplii Financial” is a division of CIBC. Banking services are not available in Quebec."
+      ],
+      [
+        "your no fee chequing account (cont'd)",
+        "statement period:  July 30, 2026 - August 30, 2026",
+        "statement date:  August 30, 2026",
+        "account number:  ····1459",
+        "trans.  eff.  transaction  funds out  funds in  balance",
+        "date  date",
+        "Aug 06  Aug 06  SOLAR SWIM  118.88  2,988.70",
+        "Aug 07  Aug 07  ZEHRS 539 FERG  220.08  2,768.62",
+        "Aug 07  Aug 07  ZEHRS 539 FERG  30.00  2,738.62",
+        "Aug 07  Aug 07  ZEHRS 539 FERG  19.98  2,718.64",
+        "Aug 07  Aug 07  LCBO/RAO 0461  30.35  2,688.29",
+        "Aug 10  Aug 07  CORP TWSHP OF CTR WELLINGTON  683.17  2,005.12",
+        "Aug 10  Aug 10  ELORA HOME HARD  35.99  1,969.13",
+        "Aug 11  Aug 11  INTERAC E-TRANSFER SEND PERSON-X",
+        "Aug 12  Aug 12  ELORA HOME HARD  10.08  1,807.05",
+        "Aug 12  Aug 12  ZEHRS 539 FERG  60.67  1,746.38",
+        "Aug 13  Aug 13  ELORA HOME HARD  59.71  1,686.67",
+        "Aug 13  Aug 13  COBS Bread  23.37  1,663.30",
+        "Aug 13  Aug 13  ZEHRS 539 FERG  172.04  1,491.26",
+        "Aug 14  Aug 14  GEDDES STREET M  53.23  1,438.03",
+        "transactions continue in the next page",
+        "page  2  of  5  7010CA-2024/09-INT",
+        "“SIMPLII FINANCIAL” and the SIMPLII FINANCIAL DESIGNS are trademarks of CIBC.  PO Box 603, STN Agincourt, Scarborough ON M1S 5K9",
+        "····8881 simplii.com",
+        "“Simplii Financial” is a division of CIBC. Banking services are not available in Quebec."
+      ],
+      [
+        "your no fee chequing account (cont'd)",
+        "statement period:  July 30, 2026 - August 30, 2026",
+        "statement date:  August 30, 2026",
+        "account number:  ····1459",
+        "trans.  eff.  transaction  funds out  funds in  balance",
+        "date  date",
+        "Aug 17  Aug 17  SQ THE VAULT C  48.52  1,389.51",
+        "Aug 17  Aug 17  LOONEY TOONEY  8.75  1,380.76",
+        "Aug 17  Aug 17  ZEHRS 539 FERG  129.71  1,251.05",
+        "Aug 17  Aug 17  LCBO/RAO 0461  32.85  1,218.20",
+        "Aug 18  Aug 17  TRILLIUM MUTUAL INSURANCE CO  291.65  926.55",
+        "Aug 18  Aug 17  CWHydro  342.00  584.55",
+        "Aug 18  Aug 18  TRANSFER IN  950.00  1,534.55",
+        "Aug 18  Aug 18  TRANSFER OUT  250.00  1,284.55",
+        "Aug 18  Aug 18  INTERAC E-TRANSFER SEND PERSON-X",
+        "Aug 19  Aug 19  INTERAC E-TRANSFER REQ MONEY PERSON-X",
+        "Aug 20  Aug 20  MARKET FRESH  46.02  695.53",
+        "Aug 21  Aug 20  ENBRIDGE  276.07  419.46",
+        "Aug 24  Aug 24  SP BRIGHTENUPTO  36.08  383.38",
+        "Aug 24  Aug 24  ZEHRS 539 FERG  202.11  181.27",
+        "transactions continue in the next page",
+        "page  3  of  5  7010CA-2024/09-INT",
+        "“SIMPLII FINANCIAL” and the SIMPLII FINANCIAL DESIGNS are trademarks of CIBC.  PO Box 603, STN Agincourt, Scarborough ON M1S 5K9",
+        "····8881 simplii.com",
+        "“Simplii Financial” is a division of CIBC. Banking services are not available in Quebec."
+      ],
+      [
+        "your no fee chequing account (cont'd)",
+        "statement period:  July 30, 2026 - August 30, 2026",
+        "statement date:  August 30, 2026",
+        "account number:  ····1459",
+        "trans.  eff.  transaction  funds out  funds in  balance",
+        "date  date",
+        "Aug 24  Aug 24  THE SCENTED MAR  22.59  158.68",
+        "Aug 24  Aug 24  FRABERTS FRESH  12.99  145.69",
+        "Aug 24  Aug 24  COBS Bread  18.85  126.84",
+        "Aug 24  Aug 24  TRANSFER IN  100.00  226.84",
+        "Aug 24  Aug 24  INTERAC E-TRANSFER SEND PERSON-X",
+        "Aug 24  Aug 24  INTERAC E-TRANSFER REQ MONEY PERSON-X",
+        "Aug 26  Aug 26  TST-Polestar He  46.59  109.25",
+        "Aug 27  Aug 27  TRANSFER IN  1,700.00  1,809.25",
+        "Aug 27  Aug 27  LCBO/RAO 0461  60.90  1,748.35",
+        "Aug 27  Aug 27  ZEHRS 539 FERG  167.57  1,580.78",
+        "Aug 28  Aug 28  ELORA HOME HARD  22.31  1,558.47",
+        "Aug 30  Aug 31  INTEREST  0.01  1,558.48",
+        "end of transactions",
+        "total funds out  5,657.37",
+        "total funds in  5,250.01",
+        "closing balance  1,558.48",
+        "end of your no fee chequing account ····1459  information",
+        "page  4  of  5  7010CA-2024/09-INT",
+        "“SIMPLII FINANCIAL” and the SIMPLII FINANCIAL DESIGNS are trademarks of CIBC.  PO Box 603, STN Agincourt, Scarborough ON M1S 5K9",
+        "····8881 simplii.com",
+        "“Simplii Financial” is a division of CIBC. Banking services are not available in Quebec."
+      ],
+      [
+        "your no fee chequing account (cont'd)",
+        "statement period:  July 30, 2026 - August 30, 2026",
+        "statement date:  August 30, 2026",
+        "account number:  ····1459",
+        "Please note",
+        "This statement includes all entries available at the time of processing.",
+        "Please review your statement. If you have any questions about a transaction on your statement, please contact us anytime. For",
+        "Personal Lines of Credit, if you believe there’s an error on your statement, you must contact us within 30 days of the statement date.",
+        "For savings accounts, if you believe there’s an error on your statement, you must contact us within 90 days of any transaction date (or",
+        "the date the transaction would have occurred). To review the terms and conditions that apply to your statement, please refer to the",
+        "“Simplii Financial Products and Services Agreement”.",
+        "Interest Charges - Interest (including interest on charges and insurance premiums, if applicable) is calculated on the daily closing",
+        "balance of your account and accrues from the date a transaction is made (i.e., the “eff. date”). The “trans. date” is the date when the",
+        "transaction was posted to your account and may vary from the \"eff. date\".",
+        "Monthly Interest Calculation - Take the account balance at the end of each day, multiply it by the interest rate applicable on that",
+        "specific date, and divide the result by 365. The total monthly interest is calculated by adding the interest amounts for each day within",
+        "the statement period. On the statement period end date, all accrued interest is posted to your account. For Lines of Credit, unpaid",
+        "interest will compound until all indebtedness is repaid.",
+        "The following are examples of how interest is charged on a $1,000 balance outstanding for a 30-day month:",
+        "Interest Rate  Monthly Interest Calculation  Interest Rate  Monthly Interest Calculation",
+        "6.00%  $4.93  10.00%  $8.22",
+        "7.00%  $5.75  11.00%  $9.04",
+        "8.00%  $6.58  12.00%  $9.86",
+        "9.00%  $7.40  13.00%  $10.69",
+        "Even in a leap year, interest is calculated by multiplying the then-outstanding principal amount by the current interest rate in effect at",
+        "the applicable time, dividing the product by 365 and multiplying the result by the number of days in the payment period during which",
+        "such current interest rate was chargeable.",
+        "page  5  of  5  7010CA-2024/09-INT",
+        "“SIMPLII FINANCIAL” and the SIMPLII FINANCIAL DESIGNS are trademarks of CIBC.  PO Box 603, STN Agincourt, Scarborough ON M1S 5K9",
+        "····8881 simplii.com",
+        "“Simplii Financial” is a division of CIBC. Banking services are not available in Quebec."
+      ]
+    ]
+  },
+  "notes": "Staged by the R-591 corpus proof (S250). Text-layer document; raw rows are the extractor output.",
+  "provenance": {
+    "stagedAt": "2026-09-13T23:41:08.725Z",
+    "sourceHash": "660ee3aa267655e7",
+    "pageCount": 5,
+    "hasTextLayer": true,
+    "model": "claude-opus-5",
+    "calls": 1,
+    "costUsd": 0.1658
+  }
+}

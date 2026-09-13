@@ -1,0 +1,11 @@
+{
+  "name": "@claude-lib/statement-layout",
+  "version": "0.2.0",
+  "description": "The layout agent: given a document no fingerprint recognised, propose a canonical Statement whose every section balances, list every unused row with a reason, or say plainly that this is not a statement. The model sits behind ModelPort; the verifier is arithmetic, never the model.",
+  "type": "module",
+  "exports": "./src/index.js",
+  "claudeLib": {
+    "class": "agent"
+  },
+  "dependencies": {}
+}

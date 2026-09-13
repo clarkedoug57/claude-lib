@@ -1,0 +1,11 @@
+{
+  "name": "@claude-lib/statement-fixtures",
+  "version": "0.2.0",
+  "description": "The staged-fixture format (a proposal + its redacted raw rows + notes + provenance), the redaction utility (mask account numbers, replace names, keep amounts and dates), and the negative fixture for a document that is not a statement. Pure.",
+  "type": "module",
+  "exports": "./src/index.js",
+  "claudeLib": {
+    "class": "utility"
+  },
+  "dependencies": {}
+}

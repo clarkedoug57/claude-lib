@@ -1,0 +1,11 @@
+{
+  "name": "@claude-lib/statement-detect",
+  "version": "0.2.0",
+  "description": "Layout detection over extracted text: a fingerprint registry (must / mustNot / version), the no-text-layer signal, and the 1 / 0 / 2+ rule. Pure. Knows no parser and no app.",
+  "type": "module",
+  "exports": "./src/index.js",
+  "claudeLib": {
+    "class": "utility"
+  },
+  "dependencies": {}
+}

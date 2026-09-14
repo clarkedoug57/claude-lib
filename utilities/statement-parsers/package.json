@@ -1,0 +1,11 @@
+{
+  "name": "@claude-lib/statement-parsers",
+  "version": "0.4.0",
+  "description": "Deterministic parsers, one per statement layout, each registered by fingerprint and each producing a canonical Statement proven by its staged fixture. Pure. Knows no app, no store, no model.",
+  "type": "module",
+  "exports": "./src/index.js",
+  "claudeLib": {
+    "class": "utility"
+  },
+  "dependencies": {}
+}

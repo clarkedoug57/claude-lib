@@ -1,10 +1,10 @@
 {
   "formatVersion": 1,
   "kind": "statement",
-  "id": "td/line-of-credit-statement",
+  "id": "td/line-of-credit",
   "statement": {
     "issuer": "TD",
-    "documentType": "Line of Credit Statement",
+    "documentType": "line-of-credit",
     "currency": "CAD",
     "period": {
       "start": "2026-08-01",
@@ -45,7 +45,7 @@
           {
             "date": "2026-08-27",
             "effectiveDate": null,
-            "description": "HP355 TFR-FR ····TED",
+            "description": "HP355 TFR-FR ····F3J",
             "amount": -16966.16,
             "runningBalance": null,
             "page": 1,
@@ -75,7 +75,7 @@
           {
             "date": "2026-08-31",
             "effectiveDate": null,
-            "description": "RQ551 TFR-FR····TED",
+            "description": "RQ551 TFR-FR····F3J",
             "amount": -13075.53,
             "runningBalance": null,
             "page": 2,
@@ -109,33 +109,38 @@
     "ignored": [
       {
         "page": 1,
-        "text": "Aug 01  OPENING BALANCE  12,630.23",
-        "reason": "Opening balance row, not a transaction"
+        "text": "Credit Limit :  $30,000.00",
+        "reason": "Account summary: credit limit / available credit"
+      },
+      {
+        "page": 1,
+        "text": "Available Credit :  $33,045.89",
+        "reason": "Account summary: credit limit / available credit"
       },
       {
         "page": 1,
         "text": "Sep 21/26  0.00  0.00",
-        "reason": "Payment details block (due date / minimum payment), not a transaction"
+        "reason": "Payment details block (due date / overdue / minimum payment), not a transaction"
       },
       {
         "page": 2,
-        "text": "Aug 31  CLOSING BALANCE  -3,045.89",
-        "reason": "Closing balance row, not a transaction"
+        "text": "Non-Int erest Charges  $30,041.69",
+        "reason": "Period totals summary block, not a transaction"
       },
       {
         "page": 2,
-        "text": "Total New Advances, Interest & Non-Interest Charges $14,365.57 / Total Payments/Credits $30,041.69",
-        "reason": "Period totals summary block"
+        "text": "$14,365.57",
+        "reason": "Period totals summary block, not a transaction"
       },
       {
         "page": 2,
         "text": "Aug 01 - Aug 31  4.450  +5.990  10.440  95.57",
-        "reason": "Interest rate table row; the interest charge itself is already an item"
+        "reason": "Interest rate table row; the interest charge is already an item"
       },
       {
         "page": 2,
-        "text": "Total Interest  95.57",
-        "reason": "Interest table total"
+        "text": "Tot al Interest  95.57",
+        "reason": "Interest table total, not a transaction"
       }
     ]
   },
@@ -175,7 +180,7 @@
         "Dat e  Descript ion  Amount ($)",
         "Aug 01  OPENING BALANCE  12,630.23",
         "Aug 04  TD ATM W/D  ····0194  250.00",
-        "Aug 27  HP355 TFR-FR ····TED  -16,966.16",
+        "Aug 27  HP355 TFR-FR ····F3J  -16,966.16",
         "Aug 27  SEND E-TFR * * * J5b  4,000.00",
         "Aug 31  TD ATM W/D  ····5216  20.00"
       ],
@@ -185,7 +190,7 @@
         "ACTIVITY (Cont inued)",
         "Activit y",
         "Date  Description  Amount ($)",
-        "Aug 31  RQ551 TFR-FR····TED  -13,075.53",
+        "Aug 31  RQ551 TFR-FR····F3J  -13,075.53",
         "Aug 31  SEND E-TFR * * * E3k  10,000.00",
         "Aug 31  INTEREST  95.57",
         "Aug 31  CLOSING BALANCE  -3,045.89",
@@ -209,14 +214,21 @@
       []
     ]
   },
-  "notes": "Staged by the R-591 corpus proof (S250). Text-layer document; raw rows are the extractor output.",
+  "notes": "Staged by the R-593 parser (PCC S252) from the extractor's text-layer rows; the Statement is the parser's own output, redacted by construction. Ledger proven against the R-591 model-accepted reading of the same document.",
   "provenance": {
-    "stagedAt": "2026-09-13T23:38:22.956Z",
-    "sourceHash": "eded9003a5ebc8a1",
+    "stagedAt": "2026-09-14T18:57:32.228Z",
+    "sourceHash": "c9a74af89aaa8864",
     "pageCount": 3,
     "hasTextLayer": true,
-    "model": "claude-opus-5",
-    "calls": 1,
-    "costUsd": 0.049
+    "parser": "td-line-of-credit",
+    "stagedBy": "R-593",
+    "modelReading": {
+      "fixture": "fixtures/td/line-of-credit-statement.json",
+      "sourceHash": "eded9003a5ebc8a1",
+      "itemsParser": 7,
+      "itemsModel": 7,
+      "anchorsAndPeriodAgree": true,
+      "ledgerMismatches": 0
+    }
   }
 }

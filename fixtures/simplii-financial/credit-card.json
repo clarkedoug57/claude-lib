@@ -1,10 +1,10 @@
 {
   "formatVersion": 1,
   "kind": "statement",
-  "id": "simplii-financial/credit-card-statement",
+  "id": "simplii-financial/credit-card",
   "statement": {
     "issuer": "Simplii Financial",
-    "documentType": "Credit card statement",
+    "documentType": "credit-card",
     "currency": "CAD",
     "period": {
       "start": "2026-07-23",
@@ -50,52 +50,112 @@
       {
         "page": 1,
         "text": "Previous balance  $1.49 CR",
-        "reason": "Summary block: opening balance, not a transaction"
+        "reason": "Account-at-a-glance summary: previous balance, carried as the section opening"
       },
       {
         "page": 1,
-        "text": "Payments  $0.00 / Other credits  0.00 / Total credits  -  $0.00",
-        "reason": "Summary totals"
+        "text": "Payments  $0.00  TTY  1 888 ····9022",
+        "reason": "Account-at-a-glance summary block (totals, rewards, rates), not a transaction"
       },
       {
         "page": 1,
-        "text": "Purchases  2.79 / Cash advances 0.00 / Interest 0.00 / Fees 0.00 / Total charges  +  $2.79",
-        "reason": "Summary totals"
+        "text": "Other credits  0.00",
+        "reason": "Account-at-a-glance summary block (totals, rewards, rates), not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Total credits  -  $0.00  Summary  Credit",
+        "reason": "Account-at-a-glance summary block (totals, rewards, rates), not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Purchases  2.79  Limit  $4,000.00",
+        "reason": "Account-at-a-glance summary block (totals, rewards, rates), not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Cash advances  0.00  Available  $3,998.70",
+        "reason": "Account-at-a-glance summary block (totals, rewards, rates), not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Interest  0.00",
+        "reason": "Account-at-a-glance summary block (totals, rewards, rates), not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Fees  0.00",
+        "reason": "Account-at-a-glance summary block (totals, rewards, rates), not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Regular purchases  21.99%",
+        "reason": "Account-at-a-glance summary block (totals, rewards, rates), not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Total charges  +  $2.79  Cash advances  22.99%",
+        "reason": "Account-at-a-glance summary block (totals, rewards, rates), not a transaction"
       },
       {
         "page": 1,
         "text": "New balance  =  $1.30",
-        "reason": "Summary block: closing balance"
+        "reason": "Account-at-a-glance summary: new balance, carried as the section closing"
       },
       {
         "page": 1,
-        "text": "Current month’s minimum payment  $1.30 / Please pay this amount by  Sep 14, 2026",
-        "reason": "Minimum payment due notice, not a transaction"
+        "text": "As at last statement  +  0.00",
+        "reason": "Account-at-a-glance summary block (totals, rewards, rates), not a transaction"
       },
       {
         "page": 1,
-        "text": "Your Cash Back: As at last statement + 0.00; 0.5% Cash Back + 0.01; Total Cash Back = 0.01",
-        "reason": "Cash back rewards summary, not an account transaction"
+        "text": "Current month’s minimum payment  $1.30  This statement",
+        "reason": "Account-at-a-glance summary block (totals, rewards, rates), not a transaction"
       },
       {
         "page": 1,
-        "text": "Summary Credit Limit $4,000.00 / Available $3,998.70",
-        "reason": "Credit limit summary"
+        "text": "0.5% Cash Back  +  0.01",
+        "reason": "Account-at-a-glance summary block (totals, rewards, rates), not a transaction"
       },
       {
         "page": 1,
-        "text": "Payment slip: New balance $1.30 / Sep 14, 2026  $1.30 / Total payment enclosed",
-        "reason": "Tear-off payment slip"
+        "text": "Total Cash Back  =  0.01",
+        "reason": "Account-at-a-glance summary block (totals, rewards, rates), not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Cash Back Visa Card  •  Telephone Banking: 1 888 ····8881  New balance  $1.30",
+        "reason": "Payment slip (due date, minimum payment, new balance), not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Sep 14, 2026  $1.30",
+        "reason": "Payment slip (due date, minimum payment, new balance), not a transaction"
       },
       {
         "page": 2,
         "text": "Total for  4525 XXXX XXXX 0916  $2.79",
-        "reason": "Section total"
+        "reason": "Section total, not a transaction"
       },
       {
         "page": 3,
-        "text": "Spend Report: Home and Office Improvement 1 2.79 ... ; Other Transactions 0 0.00 ... 1 -1.50; Total 1 2.79 2 $1.29; Total Monthly Budget 2.79",
-        "reason": "Spend report / budget summary for period July 23 to August 22, 2026, not transactions"
+        "text": "Home and Office Improvement  1  2.79  -  -  1  2.79",
+        "reason": "Spend report row (category totals), not a transaction"
+      },
+      {
+        "page": 3,
+        "text": "Other Transactions  0  0.00  -  -  1  -1.50",
+        "reason": "Spend report row (category totals), not a transaction"
+      },
+      {
+        "page": 3,
+        "text": "Total  1  2.79  2  $1.29",
+        "reason": "Spend report row (category totals), not a transaction"
+      },
+      {
+        "page": 3,
+        "text": "Total Monthly Budget  2.79  -  -",
+        "reason": "Spend report row (category totals), not a transaction"
       }
     ]
   },
@@ -213,14 +273,21 @@
       []
     ]
   },
-  "notes": "Staged by the R-591 corpus proof (S250). Text-layer document; raw rows are the extractor output.",
+  "notes": "Staged by the R-593 parser (PCC S252) from the extractor's text-layer rows; the Statement is the parser's own output, redacted by construction. Ledger proven against the R-591 model-accepted reading of the same document.",
   "provenance": {
-    "stagedAt": "2026-09-13T23:38:37.034Z",
-    "sourceHash": "09759f07af0f7b5b",
+    "stagedAt": "2026-09-14T18:57:32.197Z",
+    "sourceHash": "c5a82591b87b1f8c",
     "pageCount": 4,
     "hasTextLayer": true,
-    "model": "claude-opus-5",
-    "calls": 1,
-    "costUsd": 0.045
+    "parser": "simplii-credit-card",
+    "stagedBy": "R-593",
+    "modelReading": {
+      "fixture": "fixtures/simplii-financial/credit-card-statement.json",
+      "sourceHash": "09759f07af0f7b5b",
+      "itemsParser": 1,
+      "itemsModel": 1,
+      "anchorsAndPeriodAgree": true,
+      "ledgerMismatches": 0
+    }
   }
 }

@@ -1,0 +1,282 @@
+{
+  "formatVersion": 1,
+  "kind": "statement",
+  "id": "td/credit-card",
+  "statement": {
+    "issuer": "TD",
+    "documentType": "credit-card",
+    "currency": "CAD",
+    "period": {
+      "start": "2025-12-10",
+      "end": "2026-01-09"
+    },
+    "sections": [
+      {
+        "identity": {
+          "accountNumber": "4520 XXXX XXXX 9734",
+          "holders": [
+            "HOLDER-1"
+          ],
+          "label": "TD CASH BACK CARD"
+        },
+        "period": {
+          "start": "2025-12-10",
+          "end": "2026-01-09"
+        },
+        "opening": {
+          "balance": 5.48,
+          "printed": true
+        },
+        "closing": {
+          "balance": 0.09,
+          "printed": true
+        },
+        "items": [
+          {
+            "date": "2026-01-05",
+            "effectiveDate": "2026-01-06",
+            "description": "PAYMENT - THANK YOU",
+            "amount": -5.48,
+            "runningBalance": null,
+            "page": 1,
+            "sequence": 0,
+            "category": "Payment"
+          },
+          {
+            "date": "2026-01-09",
+            "effectiveDate": "2026-01-09",
+            "description": "RETAIL INTEREST",
+            "amount": 0.09,
+            "runningBalance": null,
+            "page": 1,
+            "sequence": 1,
+            "category": "Interest"
+          }
+        ],
+        "positions": null
+      }
+    ],
+    "ignored": [
+      {
+        "page": 1,
+        "text": "Previous  Balance  +  70.46",
+        "reason": "Balance calculation / cash back summary block, not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Earned  this  statement  period  -  0.00",
+        "reason": "Balance calculation / cash back summary block, not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Bonus,  Accelerators  &  -  0.00",
+        "reason": "Balance calculation / cash back summary block, not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "STATEMENT PERIOD:  December 10, 2025 to January 09, 2026  Total  Cash  Back  Dollars  =  70.46",
+        "reason": "Statement header; the Cash Back Dollars figure beside it is a rewards summary, not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "PREVIOUS  STATEMENT  BALANCE  $5.48  Minimum  Payment  $0.09  ····5212 HRI - - 01 - 01 - 07 - -",
+        "reason": "Opening balance (previous statement balance), carried as the section opening"
+      },
+      {
+        "page": 1,
+        "text": "Annual  Interest  Rate:  Purchases  21.99%",
+        "reason": "Undated amount outside the transaction table (summary, limit, rate or slip), not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "TOTAL  NEW  BALANCE  $0.09  Cash  Advances  22.99%",
+        "reason": "Closing balance (total new balance), carried as the section closing"
+      },
+      {
+        "page": 1,
+        "text": "Previous  Balance  $5.48",
+        "reason": "Balance calculation / cash back summary block, not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Payments  &  Credits  $5.48",
+        "reason": "Balance calculation / cash back summary block, not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Purchases  &  Other  Charges  $0.00",
+        "reason": "Balance calculation / cash back summary block, not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Cash  Advances  $0.00",
+        "reason": "Balance calculation / cash back summary block, not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Interest  $0.09",
+        "reason": "Balance calculation / cash back summary block, not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Fees  $0.00",
+        "reason": "Balance calculation / cash back summary block, not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "Sub-total  $0.09",
+        "reason": "Balance calculation / cash back summary block, not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "NEW  BALANCE  $0.09",
+        "reason": "Balance calculation / cash back summary block, not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "$0.09  $0.09  Jan.  30,  2026  $",
+        "reason": "Payment slip (new balance, minimum payment, due date), not a transaction"
+      }
+    ]
+  },
+  "raw": {
+    "pages": [
+      [
+        ".",
+        "CONTACT  INFORMATION",
+        "Customer  Service/Lost  &  Stolen  ····8472",
+        "TTY  Inquiries  (with  hearing  loss)  ····3194",
+        "Chat  with  us  on  EasyWeb  EasyWeb.td.com",
+        "TD  Cash  Back  Dollars",
+        "TD  CASH  BACK  CARD  ····9889",
+        "Summary",
+        "Previous  Balance  +  70.46",
+        "HOLDER-1  4520 XXXX XXXX 9734",
+        "Earned  this  statement  period  -  0.00",
+        "STATEMENT DATE:  January 09, 2026  1 OF 2",
+        "Bonus,  Accelerators  &  -  0.00",
+        "PREVIOUS STATEMENT:  December 09, 2025  Adjustments",
+        "STATEMENT PERIOD:  December 10, 2025 to January 09, 2026  Total  Cash  Back  Dollars  =  70.46",
+        "Balance",
+        "TRANSACTION  POSTING",
+        "DATE  DATE  ACTIVITY  DESCRIPTION  AMOUNT($)  PAYMENT  INFORMATION",
+        "PREVIOUS  STATEMENT  BALANCE  $5.48  Minimum  Payment  $0.09  ····5212 HRI - - 01 - 01 - 07 - -",
+        "Payment  Due  Date  Jan.  30,  2026",
+        "JAN 5  JAN 6  PAYMENT - THANK YOU  -$5.48",
+        "Credit  Limit  $13,000",
+        "Available  Credit  $12,999",
+        "JAN 9  JAN 9  RETAIL INTEREST  $0.09",
+        "Annual  Interest  Rate:  Purchases  21.99%",
+        "TOTAL  NEW  BALANCE  $0.09  Cash  Advances  22.99%",
+        "TD  MESSAGE  CENTRE:  TDSTM····1000_····6531_002",
+        "-",
+        "CALCULATING  YOUR  BALANCE",
+        "Previous  Balance  $5.48",
+        "Payments  &  Credits  $5.48",
+        "Purchases  &  Other  Charges  $0.00",
+        "Cash  Advances  $0.00",
+        "Interest  $0.09",
+        "Fees  $0.00",
+        "Sub-total  $0.09",
+        "NEW  BALANCE  $0.09",
+        "NEW  BALANCE  MINIMUM  PAYMENT  PAYMENT  DUE  DATE  AMOUNT  PAID",
+        "$0.09  $0.09  Jan.  30,  2026  $",
+        "TD  CANADA  TRUST",
+        "P.O.B  /C.P.  611",
+        "AGINCOURT,  ONTARIO  M1S  5J7",
+        "TD  CASH  BACK  CARD",
+        "Account  Number:  4520 XXXX XXXX 9734",
+        "TDSTM····1000_····6531_002 E D  1.  Payments  can  be  made  via:",
+        "TM",
+        "HOLDER-1  EasyLine  Telephone Banking",
+        "TM",
+        "REDACTEDasyWeb  Internet  banking",
+        "The Green Machine",
+        "ELORA  ON  REDACTED",
+        "TD Canada Trust Branch",
+        "Mail",
+        "2.  Make  cheques  payable  to  TD  Canada  Trust.",
+        "3.  Detach  and  return  with  payment",
+        "····9734  ····0009  ····0009  6"
+      ],
+      [
+        "2 OF 2",
+        "What is the minimum payment and the Payment Due Date?  Your minimum payment and the Payment Due Date is set out on the front of the statement under",
+        "the heading \"Payment Information\". It is also found on the payment slip. The Primary Cardholder must pay at least the minimum payment amount by the Payment",
+        "Due Date shown on this statement. You must make payments in the currency of the Account. If you make a payment to the Account in a foreign currency, we may",
+        "reject this payment or convert your payment to the currency of the Account. To learn more about how we will convert a payment that is not made in the currency",
+        "of the Account, see your Cardholder Agreement.  For customers with an active TD Payment Plan  , you must pay your Required Payment (which is your",
+        "Minimum Payment less any Monthly Plan Payment Amounts due by the Minimum Payment Due Date).",
+        "How do you make a payment?  See the front of the statement or your Cardholder Agreement to learn how you can make a payment. The Primary Cardholder",
+        "must select a payment method that makes sure we receive the payment so that we can post it to the Account on or before the Payment Due Date. We must",
+        "receive your payment so that we can post it to the Account on or before each Payment Due Date shown on the Account statement.",
+        "How do we apply your payment?  See your Cardholder Agreement  (and TD Payment Plan Amending Agreement if you have any Payment Plans)  to learn",
+        "how we apply payments to the Account.",
+        "····9890",
+        "What happens if the Payment Due Date falls on a Saturday, Sunday or public holiday?  If the Payment Due Date falls on a Saturday, Sunday or a public",
+        "holiday recognized by us, we will extend the Payment Due Date to the following business day. However, any applicable interest will still apply to an outstanding",
+        "Balance during this period.",
+        "····5212  What is the amount that must be paid to get the benefit of a Grace Period?  You have a minimum  21  -day interest-free Grace Period for  new  Purchases and",
+        "fees (other than Cash Advance fees or Balance Transfer fees) that appear for the first time on the Account statement (\"New Purchases\"). This means that if you",
+        "pay the outstanding New Balance shown on the Account's statement in full on or before the Payment Due Date shown on such Account statement, you will not be",
+        "charged interest on New Purchases. The Grace Period does not apply to:",
+        "•  Purchases and fees that appear on previous Account statements,",
+        "•  Cash Advances (including Balance Transfers, TD  Visa  Cheques and Cash-Like Transactions), Cash Advance fees, Balance Transfer fees and TD  Visa",
+        "Cheque fees.",
+        "For Payment Plans Only:  If you have Payment Plan(s), you will receive an interest-free Grace Period on New Purchases (excluding New Purchases that you",
+        "TDSTM····1000_····6531_002",
+        "have put into a Payment Plan) if you pay the \"Grace Period Payment Amount\" on or before the Payment Due Date. If you have any active Payment Plans, your",
+        "\"Grace Period Payment Amount\" will be calculated as follows:",
+        "•  New Balance on your monthly statement, minus your Total Payment Plans balance that is shown on your monthly statement, plus your Total Monthly",
+        "Payment Plan Amount(s) that are due on your monthly statement.",
+        "However, if you move a purchase that has already appeared on your monthly statement into a TD Payment Plan prior to the Payment Due Date of that monthly",
+        "statement, the Grace Period Payment Amount will be:",
+        "1.  If you do not have an active Payment Plan on your current monthly statement:  The New Balance shown on that monthly statement minus the",
+        "purchase amount(s) converted into a Payment Plan; or",
+        "2.  If you have active Payment Plan(s) on your current monthly statement:  The Grace Period Payment Amount will be the Grace Period Payment",
+        "Amount figure that is already shown on your monthly statement minus the new purchase amounts(s) moved into a Payment Plan. For greater certainty,",
+        "after you convert the new purchase into a new TD Payment Plan, the amount of the new TD Payment Plan will not be included in the TD Payment Plans",
+        "balance that is used to calculate the Grace Period Payment Amount that is due by the Payment Due Date of that monthly statement.",
+        "For TD Venture Line of Credit Only:  We charge interest on the amount of all Transactions including Purchases, Cash Advances (including Balance Transfers,",
+        "Cash-Like Transactions, and TD  Visa  Cheques) and all fees or other amounts charged to the Account from the transaction date until that amount is paid in full.",
+        "There is no interest-free Grace Period.",
+        "How do we calculate and charge interest?  If interest applies, you can find the total interest charged, and the associated interest rates, on the front of your",
+        "monthly statement. To learn more about how we calculate your interest, see your Disclosure Statement and Cardholder Agreement.",
+        "What is your estimated time to pay?  Paying more than the minimum payment will decrease the amount of interest you pay and reduce the time it takes to repay",
+        "your Balance. If you have a Balance, we provide you an estimate of the length of time it will take you to pay the Balance in full as of the statement date. You can",
+        "find this on the front of the statement. If you only pay the minimum payment, the estimate is based on the following assumptions: (i) that we receive the minimum",
+        "payment on this statement, and the minimum payment on all subsequent statements, on the Payment Due Date on those statements (not prior to that date);",
+        "(ii) that each month, we receive on more than the minimum payment; and (iii) a 360-day year. Our estimate is based on the current interest rates that apply to your",
+        "Balance as a statement date (including any promotional rates for any promotional period and the rate that will apply after that promotional period has expired).",
+        "This estimate will change each month if any other assumptions in (i) and (ii) are not met, the Balance that appears on your statement changes or if the rates that",
+        "apply to your Account changes. Our estimate does not include any Transactions that have not yet posted to your Account and that are not included in the Balance",
+        "that appears on this statement.",
+        "What are your rights and obligations regarding any billing error found on this statement?  This statement describes each Transaction and discloses each",
+        "amount credited or charged, including interest, and the dates when those amounts were posted to the Account. You must review the Account statements and",
+        "contact us about any errors within  30  days from the statement date so that we can immediately investigate them. If you do not contact us about errors within",
+        "30  days from the statement date, then  :",
+        "•  We will consider all Transactions and payments to be correctly posted to the Account and our Records to be correct (except for any amount that we",
+        "credited to the Account in error); and",
+        "•  You may not make a claim against us at a later date in respect of any items or amounts posted to the Account.",
+        "If you have a dispute with a merchant relating to a Transaction posted to the Account that appears on this statement, you must first attempt to settle the problem",
+        "directly with the merchant. To learn how to manage a dispute with a merchant, see your Cardholder Agreement or visit www.td.com  .",
+        "How do you contact us for more information about the Account or if you would like to report a lost/stolen Card?",
+        "Call us:",
+        "•  Toll-free:  ····8472",
+        "•  Collect:  ····7722",
+        "All trade-marks are the property of their respective owners.",
+        "®/ The TD logo and other trade-marks are the property of The Toronto-Dominion Bank.  ····7640(01/22)"
+      ]
+    ]
+  },
+  "notes": "Staged by the R-593 parser (PCC S252) from the extractor's text-layer rows; the Statement is the parser's own output, redacted by construction. First fixture for this layout; accepted in chat.",
+  "provenance": {
+    "stagedAt": "2026-09-14T18:57:32.232Z",
+    "sourceHash": "881c62905e493ccd",
+    "pageCount": 2,
+    "hasTextLayer": true,
+    "parser": "td-cash-back-visa",
+    "stagedBy": "R-593",
+    "modelReading": null
+  }
+}

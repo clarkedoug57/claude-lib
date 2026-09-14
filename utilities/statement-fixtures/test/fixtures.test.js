@@ -48,6 +48,10 @@ describe('redactText', () => {
 
   test('masks a card number but keeps its shape', () => {
     assert.equal(redactText('Card number 4525 1234 5678 9012'), 'Card number 4525 XXXX XXXX 9012');
+    // Double-spaced groups (the TD extractor) and a partly masked number are
+    // masked too, normalised to single spaces (R-593).
+    assert.equal(redactText('Account  Number:  4520  34XX  XXXX  9734'), 'Account  Number:  4520 XXXX XXXX 9734');
+    assert.equal(redactText('5181  1622  4301  3990'), '5181 XXXX XXXX 3990');
   });
 
   test('replaces holders and listed names, longest first', () => {
@@ -58,6 +62,22 @@ describe('redactText', () => {
   test('an Interac counterparty is replaced even when no name was listed', () => {
     assert.equal(redactText('INTERAC E-TRANSFER SEND Alex Neighbour'), 'INTERAC E-TRANSFER SEND PERSON-X');
     assert.equal(redactText('E-TRANSFER REQ MONEY Pat Cousin'), 'E-TRANSFER REQ MONEY PERSON-X');
+  });
+
+  test('an Interac counterparty on a RAW extractor row loses the name and KEEPS the figures (R-593)', () => {
+    // The R-591 staging defect: the whole rest of the row became PERSON-X and
+    // the amount + running balance went with it. Chequing, line-of-credit
+    // (trailing minus) and a listed name each keep every figure byte-identical.
+    assert.equal(redactText('Aug 11  Aug 11  INTERAC E-TRANSFER SEND Dawn Fish  152.00  1,817.13'),
+      'Aug 11  Aug 11  INTERAC E-TRANSFER SEND PERSON-X  152.00  1,817.13');
+    assert.equal(redactText('Aug 03  Aug 03  INTERAC E-TRANSFER SEND Keaton Brewster  65.00  16,550.19-'),
+      'Aug 03  Aug 03  INTERAC E-TRANSFER SEND PERSON-X  65.00  16,550.19-');
+    assert.equal(redactText('Aug 27  Aug 27  INTERAC E-TRANSFER REQ MONEY Jo-Ann Allward  4,000.00  6,616.27-', { names: ['Jo-Ann Allward'] }),
+      'Aug 27  Aug 27  INTERAC E-TRANSFER REQ MONEY PERSON-1  4,000.00  6,616.27-');
+    assert.equal(redactText('Aug 03  Aug 03  INTERAC E-TRANSFER RECEIVE JO-ANN ALLWARD  1,700.00  3,434.23', { holders: ['MS JO-ANN B ALLWARD'] }),
+      'Aug 03  Aug 03  INTERAC E-TRANSFER RECEIVE PERSON-X  1,700.00  3,434.23');
+    assert.deepEqual(findResiduals('INTERAC E-TRANSFER SEND PERSON-X  152.00  1,817.13'), []);
+    assert.deepEqual(findResiduals('INTERAC E-TRANSFER SEND Dawn Fish  152.00  1,817.13'), ['E-TRANSFER SEND Dawn Fish  152.00  1,817.13']);
   });
 
   test('RECEIVE lines and E-TFR forms are people too; a bank reference after the verb is left alone', () => {
@@ -136,6 +156,10 @@ describe('stageFixture', () => {
     assert.equal(f.raw.pages[0][0], 'account number: ····3456');
     assert.equal(f.raw.pages[0][1], 'HOLDER-1 and HOLDER-2');
     assert.equal(f.raw.pages[0][2], 'Aug 01  INTERAC E-TRANSFER SEND PERSON-1  250.00  1,715.84');
+    // The un-listed counterparty path keeps the figures too (R-593).
+    const g = stageFixture({ statement: statement(), rawPages: RAW, provenance: { sourceHash: 'abc', hasTextLayer: true } });
+    assert.equal(g.raw.pages[0][2], 'Aug 01  INTERAC E-TRANSFER SEND PERSON-X  250.00  1,715.84');
+    assert.equal(g.statement.sections[0].items[0].description, 'INTERAC E-TRANSFER SEND PERSON-X');
     assert.equal(f.raw.pages[1][1], 'Card number 4525 XXXX XXXX 9012');
     assert.equal(f.provenance.pageCount, 2);
     assert.equal(f.provenance.hasTextLayer, true);

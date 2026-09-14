@@ -45,10 +45,19 @@ export const FIXTURE_FORMAT_VERSION = 1;
 // comma-grouped figure either: amounts are what a fixture proves.
 const LONG_DIGIT_RUN = /(?<![\d.,])\d(?:[\d-]{3,}\d)(?![\d.,])/g;
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
-const CARD_GROUPS = /\b(\d{4})[ \-](?:[\dX]{4}[ \-]){2}(\d{4})\b/gi;
+// Group separators may be a run of spaces: the TD extractor prints
+// "4520  34XX  XXXX  9734" with two, and that form escaped the mask (R-593).
+// The masked form is normalised to single spaces so identity reads the same
+// everywhere on the page.
+const CARD_GROUPS = /\b(\d{4})[ \-]+(?:[\dX]{4}[ \-]+){2}(\d{4})\b/gi;
 // Every Interac verb seen on the R-591 corpus: SEND / RECEIVE / REQ MONEY,
-// plus the longer forms. What follows the verb is a person.
-const INTERAC = /((?:E-?TRANSFER|E-?TFR|INTERAC)[^A-Za-z0-9]*(?:SEND|SENT|TO|REQ MONEY|REQUEST|RECEIVE|RECEIVED|RECEIVED FROM|FROM|DEPOSIT)\s+)(.+)$/i;
+// plus the longer forms. What follows the verb is a person — UP TO the first
+// money figure. R-593 (S252): the first rule took the whole rest of the row,
+// so a raw extractor row "SEND Dawn Fish  152.00  1,817.13" lost its amount
+// and running balance to the placeholder; every e-transfer row in the staged
+// fixtures was invisible to the coverage check and unparseable. The figures
+// are what a fixture proves; only the name is the leak.
+const INTERAC = /((?:E-?TRANSFER|E-?TFR|INTERAC)[^A-Za-z0-9]*(?:SEND|SENT|TO|REQ MONEY|REQUEST|RECEIVE|RECEIVED|RECEIVED FROM|FROM|DEPOSIT)\s+)(.+?)(\s+-?\$?\d{1,3}(?:,\d{3})*\.\d{2}(?:-|CR)?(?:\s.*)?)?$/i;
 // A bank's own transfer line names the OTHER account: "HP355 TFR-FR 392HF3J".
 // The reference after TFR-FR / TFR-TO is an account identifier — mask it.
 const TRANSFER_REF = /(\bTFR-?(?:FR|TO)\s*)([A-Z0-9]{5,})/gi;
@@ -96,11 +105,11 @@ function replaceNames(text, nameMap) {
   for (const { name, placeholder } of nameMap) {
     out = out.replace(phrasePattern(name), placeholder);
   }
-  out = out.replace(INTERAC, (m, lead, rest) => {
+  out = out.replace(INTERAC, (m, lead, rest, figures) => {
     // Already a placeholder, or a bank reference like "* * * J5b"? Leave it.
     const r = rest.trim();
     if (/^(PERSON|HOLDER)-\d+/.test(r) || /^(PERSON-X|REDACTED)\b/.test(r) || /^[*\s]/.test(r)) return m;
-    return `${lead}PERSON-X`;
+    return `${lead}PERSON-X${figures || ''}`;
   });
   return out;
 }

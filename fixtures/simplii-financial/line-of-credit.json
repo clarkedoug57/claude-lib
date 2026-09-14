@@ -1,10 +1,10 @@
 {
   "formatVersion": 1,
   "kind": "statement",
-  "id": "simplii-financial-a-division-of-cibc/personal-line-of-credit-statement",
+  "id": "simplii-financial/line-of-credit",
   "statement": {
-    "issuer": "Simplii Financial (a division of CIBC)",
-    "documentType": "Personal Line of Credit statement",
+    "issuer": "Simplii Financial",
+    "documentType": "line-of-credit",
     "currency": "CAD",
     "period": {
       "start": "2026-07-30",
@@ -40,7 +40,7 @@
             "runningBalance": -16550.19,
             "page": 1,
             "sequence": 0,
-            "category": "funds out"
+            "category": null
           },
           {
             "date": "2026-08-04",
@@ -50,17 +50,17 @@
             "runningBalance": -6550.19,
             "page": 1,
             "sequence": 1,
-            "category": "funds in"
+            "category": null
           },
           {
             "date": "2026-08-05",
             "effectiveDate": "2026-08-05",
-            "description": "INTERAC E-TRANSFER RECEIVE PERSON-1",
+            "description": "INTERAC E-TRANSFER RECEIVE PERSON-X",
             "amount": 100,
             "runningBalance": -6450.19,
             "page": 1,
             "sequence": 2,
-            "category": "funds in"
+            "category": null
           },
           {
             "date": "2026-08-17",
@@ -70,7 +70,7 @@
             "runningBalance": -2346.19,
             "page": 1,
             "sequence": 3,
-            "category": "funds in"
+            "category": null
           },
           {
             "date": "2026-08-18",
@@ -80,7 +80,7 @@
             "runningBalance": -3663.47,
             "page": 1,
             "sequence": 4,
-            "category": "funds out"
+            "category": null
           },
           {
             "date": "2026-08-18",
@@ -90,7 +90,7 @@
             "runningBalance": -4613.47,
             "page": 1,
             "sequence": 5,
-            "category": "funds out"
+            "category": null
           },
           {
             "date": "2026-08-18",
@@ -100,7 +100,7 @@
             "runningBalance": -4363.47,
             "page": 1,
             "sequence": 6,
-            "category": "funds in"
+            "category": null
           },
           {
             "date": "2026-08-19",
@@ -110,7 +110,7 @@
             "runningBalance": -4468.47,
             "page": 1,
             "sequence": 7,
-            "category": "funds out"
+            "category": null
           },
           {
             "date": "2026-08-24",
@@ -120,7 +120,7 @@
             "runningBalance": -7468.47,
             "page": 1,
             "sequence": 8,
-            "category": "funds out"
+            "category": null
           },
           {
             "date": "2026-08-24",
@@ -130,7 +130,7 @@
             "runningBalance": -7568.47,
             "page": 2,
             "sequence": 9,
-            "category": "funds out"
+            "category": null
           },
           {
             "date": "2026-08-25",
@@ -140,7 +140,7 @@
             "runningBalance": -7769.98,
             "page": 2,
             "sequence": 10,
-            "category": "funds out"
+            "category": null
           },
           {
             "date": "2026-08-27",
@@ -150,7 +150,7 @@
             "runningBalance": -6916.27,
             "page": 2,
             "sequence": 11,
-            "category": "funds in"
+            "category": null
           },
           {
             "date": "2026-08-27",
@@ -160,7 +160,7 @@
             "runningBalance": -8616.27,
             "page": 2,
             "sequence": 12,
-            "category": "funds out"
+            "category": null
           },
           {
             "date": "2026-08-27",
@@ -170,7 +170,7 @@
             "runningBalance": -10616.27,
             "page": 2,
             "sequence": 13,
-            "category": "funds out"
+            "category": null
           },
           {
             "date": "2026-08-27",
@@ -180,7 +180,7 @@
             "runningBalance": -6616.27,
             "page": 2,
             "sequence": 14,
-            "category": "funds in"
+            "category": null
           },
           {
             "date": "2026-08-30",
@@ -190,7 +190,7 @@
             "runningBalance": -6680.07,
             "page": 2,
             "sequence": 15,
-            "category": "funds out"
+            "category": "interest"
           }
         ],
         "positions": null
@@ -199,13 +199,23 @@
     "ignored": [
       {
         "page": 1,
-        "text": "Jul 30  Jul 30  BALANCE FORWARD  16,485.19-",
-        "reason": "Opening balance carried forward, not a transaction"
+        "text": "payment summary  overlimit due  $  0.00  credit limit  $  23,000.00",
+        "reason": "Payment summary block (limits, dues, due date), not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "+ past due  $  0.00  credit available  $  16,319.93",
+        "reason": "Payment summary block (limits, dues, due date), not a transaction"
+      },
+      {
+        "page": 1,
+        "text": "+ current due  $  133.60",
+        "reason": "Payment summary block (limits, dues, due date), not a transaction"
       },
       {
         "page": 1,
         "text": "= minimum payment due  $  133.60  payment due date  September 24, 2026",
-        "reason": "Payment summary block, not a transaction"
+        "reason": "Payment summary block (limits, dues, due date), not a transaction"
       },
       {
         "page": 2,
@@ -220,22 +230,37 @@
       {
         "page": 2,
         "text": "closing balance  6,680.07-",
-        "reason": "Closing balance figure, not a transaction"
+        "reason": "Closing balance summary line, carried as the section closing"
       },
       {
         "page": 2,
         "text": "Jul 30 - Aug 30 Prime 4.45% + 4.99% = 9.44%  per annum  $63.80",
-        "reason": "Interest charge summary / rate table row; the interest is already posted as the Aug 30 INTEREST CHARGE item"
+        "reason": "Interest charge summary / rate row; the interest is already posted as an item"
       },
       {
         "page": 2,
         "text": "Total Interest Charge  $63.80",
-        "reason": "Summary total, not a transaction"
+        "reason": "Interest charge summary / rate row; the interest is already posted as an item"
       },
       {
         "page": 3,
-        "text": "Interest Rate / Monthly Interest Calculation examples 6.00% $4.93 ... 13.00% $10.69",
-        "reason": "Illustrative interest-rate table, not transactions"
+        "text": "6.00%  $4.93  10.00%  $8.22",
+        "reason": "Illustrative interest-rate table, not account activity"
+      },
+      {
+        "page": 3,
+        "text": "7.00%  $5.75  11.00%  $9.04",
+        "reason": "Illustrative interest-rate table, not account activity"
+      },
+      {
+        "page": 3,
+        "text": "8.00%  $6.58  12.00%  $9.86",
+        "reason": "Illustrative interest-rate table, not account activity"
+      },
+      {
+        "page": 3,
+        "text": "9.00%  $7.40  13.00%  $10.69",
+        "reason": "Illustrative interest-rate table, not account activity"
       }
     ]
   },
@@ -258,15 +283,15 @@
         "trans.  eff.  transaction  funds out  funds in  balance",
         "date  date",
         "Jul 30  Jul 30  BALANCE FORWARD  16,485.19-",
-        "Aug 03  Aug 03  INTERAC E-TRANSFER SEND PERSON-X",
+        "Aug 03  Aug 03  INTERAC E-TRANSFER SEND PERSON-X  65.00  16,550.19-",
         "Aug 04  Aug 04  TDW RIF PYMT  10,000.00  6,550.19-",
-        "Aug 05  Aug 05  INTERAC E-TRANSFER RECEIVE PERSON-1  100.00  6,450.19-",
+        "Aug 05  Aug 05  INTERAC E-TRANSFER RECEIVE PERSON-X  100.00  6,450.19-",
         "Aug 17  Aug 17  RRIF PAYMENT  4,104.00  2,346.19-",
         "Aug 18  Aug 17  RMG Mortgage Corporation  1,317.28  3,663.47-",
         "Aug 18  Aug 18  TRANSFER OUT  950.00  4,613.47-",
         "Aug 18  Aug 18  TRANSFER IN  250.00  4,363.47-",
         "Aug 19  Aug 18  TRILLIUM MUTUAL INSURANCE CO  105.00  4,468.47-",
-        "Aug 24  Aug 24  INTERAC E-TRANSFER SEND PERSON-X",
+        "Aug 24  Aug 24  INTERAC E-TRANSFER SEND PERSON-X  3,000.00  7,468.47-",
         "transactions continue in the next page",
         "page 1 of  3  7010PLC-2024/09-INT",
         "“SIMPLII FINANCIAL” and the SIMPLII FINANCIAL DESIGNS are trademarks of CIBC.  PO Box 603, STN Agincourt, Scarborough ON M1S 5K9",
@@ -285,8 +310,8 @@
         "Aug 25  Aug 24  SUN LIFE  201.51  7,769.98-",
         "Aug 27  Aug 27  RPC/CPP  853.71  6,916.27-",
         "Aug 27  Aug 27  TRANSFER OUT  1,700.00  8,616.27-",
-        "Aug 27  Aug 27  INTERAC E-TRANSFER SEND PERSON-X",
-        "Aug 27  Aug 27  INTERAC E-TRANSFER REQ MONEY PERSON-X",
+        "Aug 27  Aug 27  INTERAC E-TRANSFER SEND PERSON-X  2,000.00  10,616.27-",
+        "Aug 27  Aug 27  INTERAC E-TRANSFER REQ MONEY PERSON-X  4,000.00  6,616.27-",
         "Aug 30  Aug 31  INTEREST CHARGE  63.80  6,680.07-",
         "end of transactions",
         "total funds out  9,502.59",
@@ -295,17 +320,17 @@
         "Interest Charge Summary",
         "Jul 30 - Aug 30 Prime 4.45% + 4.99% = 9.44%  per annum  $63.80",
         "Total Interest Charge  $63.80",
-        "end of your personal line of credit  ····7004 information",
+        "end of your personal line of credit  ····7004  information",
         "This statement includes all entries available at the time of processing.",
         "Please review your statement. If you have any questions about a transaction on your statement, please contact us anytime. For",
         "Personal Lines of Credit, if you believe there’s an error on your statement, you must contact us within 30 days of the statement date.",
         "For savings accounts, if you believe there’s an error on your statement, you must contact us within 90 days of any transaction date (or",
         "the date the transaction would have occurred). To review the terms and conditions that apply to your statement, please refer to the",
         "“Simplii Financial Products and Services Agreement”.",
-        "Interest Charges - Interest (including interest on charges and insurance premiums, if applicable) is calculated on the daily closing",
+        "Interest Charges  - Interest (including interest on charges and insurance premiums, if applicable) is calculated on the daily closing",
         "balance of your account and accrues from the date a transaction is made (i.e., the “eff. date”). The “trans. date” is the date when the",
         "transaction was posted to your account and may vary from the \"eff. date\".",
-        "Monthly Interest Calculation - Take the account balance at the end of each day, multiply it by the interest rate applicable on that",
+        "Monthly Interest Calculation  - Take the account balance at the end of each day, multiply it by the interest rate applicable on that",
         "specific date, and divide the result by 365. The total monthly interest is calculated by adding the interest amounts for each day within",
         "the statement period. On the statement period end date, all accrued interest is posted to your account. For Lines of Credit, unpaid",
         "interest will compound until all indebtedness is repaid.",
@@ -337,14 +362,21 @@
       ]
     ]
   },
-  "notes": "Staged by the R-591 corpus proof (S250). Text-layer document; raw rows are the extractor output.",
+  "notes": "Staged by the R-593 parser (PCC S252) from the extractor's text-layer rows; the Statement is the parser's own output, redacted by construction. Ledger proven against the R-591 model-accepted reading of the same document.",
   "provenance": {
-    "stagedAt": "2026-09-13T23:43:15.628Z",
-    "sourceHash": "8bb3a723f705d572",
+    "stagedAt": "2026-09-14T18:57:32.187Z",
+    "sourceHash": "fc04df13801e93c6",
     "pageCount": 3,
     "hasTextLayer": true,
-    "model": "claude-opus-5",
-    "calls": 1,
-    "costUsd": 0.0928
+    "parser": "simplii-line-of-credit",
+    "stagedBy": "R-593",
+    "modelReading": {
+      "fixture": "fixtures/simplii-financial-a-division-of-cibc/personal-line-of-credit-statement.json",
+      "sourceHash": "8bb3a723f705d572",
+      "itemsParser": 16,
+      "itemsModel": 16,
+      "anchorsAndPeriodAgree": true,
+      "ledgerMismatches": 0
+    }
   }
 }

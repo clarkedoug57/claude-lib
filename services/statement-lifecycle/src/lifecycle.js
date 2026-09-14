@@ -8,7 +8,7 @@
  * — gets the identical lifecycle by construction.
  *
  * THE SEQUENCE (LIFECYCLE_STEPS, in order)
- *   1. findStatementByDocumentHash   is this document already held? (re-import)
+ *   1. findStatementByDocumentHash   per document: is it already held? (re-import)
  *   2. findPriorStatements           per scope: the records already held
  *   3. captureSupersededItems        per scope: what the wipe will remove
  *   4. supersedeItems                per scope: statement = gospel        LOAD-BEARING
@@ -56,13 +56,26 @@ export function assertStatementStore(store) {
   }
 }
 
-/** A bundle must name its document and give every section an account and a period. */
+const hasHash = (d) => !!d && typeof d.hash === 'string' && d.hash.length > 0;
+
+/**
+ * The document a section came from: its own, else the bundle's. A batch that
+ * parsed several documents together (one wizard drop of several PDFs) is ONE
+ * lifecycle run over several documents — dedup runs per document, the anchor
+ * and the reconciliation run once per period, exactly as a single-document
+ * run would.
+ */
+export function documentOf(bundle, section) {
+  return hasHash(section?.document) ? section.document : bundle.document;
+}
+
+/** A bundle must name a document for every section and give every section an account and a period. */
 export function validateBundle(bundle) {
   const problems = [];
   if (!bundle || typeof bundle !== 'object') problems.push('bundle is required');
   else {
-    if (!bundle.document || typeof bundle.document.hash !== 'string' || bundle.document.hash.length === 0) {
-      problems.push('document.hash is required — it is the dedup key');
+    if (bundle.document != null && !hasHash(bundle.document)) {
+      problems.push('document.hash is required when a bundle-level document is given — it is the dedup key');
     }
     if (!Array.isArray(bundle.sections) || bundle.sections.length === 0) {
       problems.push('sections must be a non-empty array');
@@ -72,10 +85,22 @@ export function validateBundle(bundle) {
         if (!s?.period || typeof s.period.start !== 'string' || typeof s.period.end !== 'string') problems.push(`sections[${i}].period {start, end} is required`);
         else if (s.period.start > s.period.end) problems.push(`sections[${i}].period starts after it ends`);
         if (!Array.isArray(s?.items)) problems.push(`sections[${i}].items must be an array`);
+        if (s && s.document != null && !hasHash(s.document)) problems.push(`sections[${i}].document.hash is required when a section names its document`);
+        if (s && !hasHash(documentOf(bundle, s))) problems.push(`sections[${i}] resolves to no document — give the bundle a document or the section its own`);
       });
     }
   }
   if (problems.length > 0) throw new TypeError(`importStatement: invalid bundle — ${problems.join('; ')}`);
+}
+
+/** Unique documents across the bundle, first-seen order. */
+export function documentsOf(bundle) {
+  const seen = new Map();
+  for (const s of bundle.sections) {
+    const d = documentOf(bundle, s);
+    if (!seen.has(d.hash)) seen.set(d.hash, { hash: d.hash, name: d.name ?? null });
+  }
+  return [...seen.values()];
 }
 
 const scopeKey = (s) => `${s.accountKey}|${s.period.start}|${s.period.end}`;
@@ -125,7 +150,7 @@ export async function importStatement({ store, bundle, batchId } = {}) {
   const report = {
     batchId: id,
     status: IMPORT_STATUS.COMPLETE,
-    reimport: { matched: false, prior: null },
+    reimport: { matched: false, prior: null, documents: [] },
     scopes: [],
     statements: [],
     items: null,
@@ -154,10 +179,16 @@ export async function importStatement({ store, bundle, batchId } = {}) {
   };
 
   try {
-    // 1. dedup by document
+    // 1. dedup — once per distinct document in the bundle
     report.steps.push('findStatementByDocumentHash');
-    const prior = await store.findStatementByDocumentHash({ hash: bundle.document.hash });
-    report.reimport = { matched: !!prior, prior: prior || null };
+    for (const doc of documentsOf(bundle)) {
+      const prior = await store.findStatementByDocumentHash({ hash: doc.hash });
+      report.reimport.documents.push({ hash: doc.hash, name: doc.name, matched: !!prior, prior: prior || null });
+      if (prior && !report.reimport.matched) {
+        report.reimport.matched = true;
+        report.reimport.prior = prior;
+      }
+    }
 
     // 2. prior records per scope
     report.steps.push('findPriorStatements');
@@ -199,7 +230,7 @@ export async function importStatement({ store, bundle, batchId } = {}) {
   const statementIds = [];
   try {
     for (const section of bundle.sections) {
-      const r = await store.upsertStatementRecord({ section, document: bundle.document, batchId: id });
+      const r = await store.upsertStatementRecord({ section, document: documentOf(bundle, section), batchId: id });
       if (!r || r.statementId == null) throw new Error('upsertStatementRecord returned no statementId');
       statementIds.push(r.statementId);
       report.statements.push({ accountKey: section.accountKey, period: section.period, statementId: r.statementId, created: r.created === true });

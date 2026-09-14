@@ -11,7 +11,9 @@
  *   accountKey   the app's own identity for an account, opaque to the service
  *   period       { start, end }  ISO dates, inclusive
  *   scope        { accountKey, period }  — the unit of supersession
- *   document     { hash, name }  the source document; `hash` is the dedup key
+ *   document     { hash, name }  the source document; `hash` is the dedup key.
+ *                A bundle names one document, or each section names its own
+ *                (several documents parsed together are ONE lifecycle run)
  *   section      one account's part of a statement (see SectionBundle)
  *   items        the statement's lines for a section, OPAQUE to the service —
  *                the store knows their shape, the lifecycle never looks inside
@@ -68,8 +70,8 @@
  * @typedef {{ balance: number, printed: boolean }} BalanceAnchor
  * @typedef {{ accountKey: string, period: Period, currency?: string|null,
  *             opening?: BalanceAnchor|null, closing?: BalanceAnchor|null,
- *             items: unknown[], extras?: unknown }} SectionBundle
- * @typedef {{ document: StatementDocument, sections: SectionBundle[], extras?: unknown }} ImportBundle
+ *             items: unknown[], document?: StatementDocument, extras?: unknown }} SectionBundle
+ * @typedef {{ document?: StatementDocument, sections: SectionBundle[], extras?: unknown }} ImportBundle
  */
 
 /** Every method a StatementStore implements, in lifecycle order. */

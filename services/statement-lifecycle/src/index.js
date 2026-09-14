@@ -7,6 +7,8 @@
  *   assertStatementStore(store)                    the conformance check the lifecycle runs first
  *   validateBundle(bundle)                         the bundle check the lifecycle runs second
  *   scopesOf(bundle) / periodsOf(bundle)           the supersession units and the anchor units
+ *   documentsOf(bundle) / documentOf(bundle, section)
+ *                                                  the dedup units — a section may name its own document
  *   LIFECYCLE_STEPS / IMPORT_STATUS / LOAD_BEARING_STEPS / DEGRADABLE_STEPS
  */
 
@@ -16,6 +18,8 @@ export {
   validateBundle,
   scopesOf,
   periodsOf,
+  documentsOf,
+  documentOf,
   LIFECYCLE_STEPS,
   IMPORT_STATUS,
   LOAD_BEARING_STEPS,

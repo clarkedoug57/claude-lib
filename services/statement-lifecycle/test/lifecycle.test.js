@@ -9,7 +9,7 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  importStatement, assertStatementStore, validateBundle, scopesOf, periodsOf,
+  importStatement, assertStatementStore, validateBundle, scopesOf, periodsOf, documentsOf,
   LIFECYCLE_STEPS, IMPORT_STATUS, LOAD_BEARING_STEPS, DEGRADABLE_STEPS,
 } from '../src/index.js';
 import { STATEMENT_STORE_METHODS } from '../../../ports/statement-store/src/index.js';
@@ -116,6 +116,31 @@ describe('statement = gospel', () => {
     assert.equal(store.state.statements.length, 2);
   });
 
+  test('several documents parsed together are ONE run: dedup per document, one anchor, one reconciliation', async () => {
+    const store = createMemoryStatementStore();
+    const b = bundle();
+    delete b.document;
+    b.sections[0].document = { hash: 'chequing.pdf#1', name: 'chequing.pdf' };
+    b.sections[1].document = { hash: 'visa.pdf#1', name: 'visa.pdf' };
+    assert.deepEqual(documentsOf(b).map((d) => d.hash), ['chequing.pdf#1', 'visa.pdf#1']);
+    const first = await importStatement({ store, bundle: b });
+    assert.equal(first.status, IMPORT_STATUS.COMPLETE);
+    assert.equal(store.state.calls.filter((c) => c === 'findStatementByDocumentHash').length, 2);
+    assert.equal(store.state.calls.filter((c) => c === 'writeAnchor').length, 1);
+    assert.equal(store.state.calls.filter((c) => c === 'reconcile').length, 1);
+    assert.deepEqual(first.reimport.documents.map((d) => d.matched), [false, false]);
+    assert.deepEqual(store.state.statements.map((s) => s.documentHash), ['chequing.pdf#1', 'visa.pdf#1']);
+
+    // Re-drop only the visa document: one match, one reuse, one new record for a corrected chequing file.
+    b.sections[0].document = { hash: 'chequing.pdf#2', name: 'chequing-corrected.pdf' };
+    const second = await importStatement({ store, bundle: b });
+    assert.deepEqual(second.reimport.documents.map((d) => [d.hash, d.matched]), [['chequing.pdf#2', false], ['visa.pdf#1', true]]);
+    assert.equal(second.reimport.matched, true);
+    assert.equal(second.reimport.prior.documentHash, 'visa.pdf#1');
+    assert.deepEqual(second.statements.map((s) => s.created), [true, false]);
+    assert.equal(store.state.items.length, 3, 'no duplication across documents');
+  });
+
   test('a different document for the same account and period is a new record; the old one\'s items are gone', async () => {
     const store = createMemoryStatementStore();
     await importStatement({ store, bundle: bundle({ hash: 'doc-1' }) });
@@ -197,6 +222,9 @@ describe('refusals before anything runs', () => {
 
   test('a bundle without a document hash, a section without an account, or a period that ends before it starts is refused', () => {
     assert.throws(() => validateBundle({ document: {}, sections: [] }), /document\.hash is required.*sections must be a non-empty array/);
+    assert.throws(() => validateBundle({ sections: [{ accountKey: 'a', period: P, items: [] }] }), /resolves to no document/);
+    assert.throws(() => validateBundle({ sections: [{ accountKey: 'a', period: P, items: [], document: { name: 'x' } }] }), /sections\[0\]\.document\.hash is required/);
+    validateBundle({ sections: [{ accountKey: 'a', period: P, items: [], document: { hash: 'h' } }] });
     assert.throws(() => validateBundle({ document: { hash: 'x' }, sections: [{ period: P, items: [] }] }), /sections\[0\]\.accountKey/);
     assert.throws(() => validateBundle({ document: { hash: 'x' }, sections: [{ accountKey: 'a', period: { start: '2026-09-01', end: '2026-08-31' }, items: [] }] }), /starts after it ends/);
     assert.throws(() => validateBundle({ document: { hash: 'x' }, sections: [{ accountKey: 'a', period: P }] }), /items must be an array/);

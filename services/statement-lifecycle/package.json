@@ -1,6 +1,6 @@
 {
   "name": "@claude-lib/statement-lifecycle",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "The statement lifecycle every statement type shares: dedup by document, capture judgment, supersede the period (statement = gospel), one record per account and period, items with ownership, the closing anchor, reconciliation — in one fixed order, with restore on a load-bearing failure. Touches the world only through the StatementStore port.",
   "type": "module",
   "exports": "./src/index.js",

@@ -45,4 +45,4 @@ Node's built-in runner (`node --test`), no dependencies. Every `test/**/*.js` un
 
 ## Versioning
 
-Tags are the versions apps pin (`v0.1.0`, `v0.2.0`, `v0.3.0`). A change to any package bumps the root version; the consuming app's pin is a deliberate reconciliation, never a silent bump.
+Tags are the versions apps pin (`v0.1.0`, `v0.2.0`, `v0.3.0`, `v0.3.1`). A change to any package bumps the root version; the consuming app's pin is a deliberate reconciliation, never a silent bump.

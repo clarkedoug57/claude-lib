@@ -1,0 +1,11 @@
+{
+  "name": "@claude-lib/statement-store",
+  "version": "0.3.0",
+  "description": "The port a statement lifecycle needs from an app: find a statement by its document hash, find the prior records for an account and period, capture and supersede the items they own, record the statement, insert its items, write the closing anchor, reconcile, restore. Named in domain terms; no SQL, no table, no app vocabulary.",
+  "type": "module",
+  "exports": "./src/index.js",
+  "claudeLib": {
+    "class": "port"
+  },
+  "dependencies": {}
+}

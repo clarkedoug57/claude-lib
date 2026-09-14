@@ -1,6 +1,6 @@
 {
   "name": "claude-lib",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Shared library for the Claude framework projects: agents, services, utilities, ports and store adapters. One repository, one version, pinned by each app.",
   "type": "module",
   "license": "UNLICENSED",
@@ -16,7 +16,10 @@
     "./utilities/statement-model": "./utilities/statement-model/src/index.js",
     "./utilities/statement-detect": "./utilities/statement-detect/src/index.js",
     "./utilities/statement-fixtures": "./utilities/statement-fixtures/src/index.js",
-    "./agents/statement-layout": "./agents/statement-layout/src/index.js"
+    "./agents/statement-layout": "./agents/statement-layout/src/index.js",
+    "./ports/statement-store": "./ports/statement-store/src/index.js",
+    "./services/statement-lifecycle": "./services/statement-lifecycle/src/index.js",
+    "./adapters/store/memory": "./adapters/store/memory/src/index.js"
   },
   "scripts": {
     "test": "node --test"

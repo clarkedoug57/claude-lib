@@ -1,0 +1,11 @@
+{
+  "name": "@claude-lib/store-memory",
+  "version": "0.3.0",
+  "description": "An in-memory StatementStore: the lifecycle's own test double and any app's. Records every call in order, keeps statements, items, anchors and reconciliations in plain arrays, reconciles canonical items through statement-core, and can be told to fail at a named step to prove restore.",
+  "type": "module",
+  "exports": "./src/index.js",
+  "claudeLib": {
+    "class": "adapter"
+  },
+  "dependencies": {}
+}
